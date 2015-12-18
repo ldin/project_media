@@ -17,7 +17,7 @@ Disallow: /user
 
 #Sitemap:
 
-Host: 
+Host:
 
 User-agent: grub-client
 Disallow: /
