@@ -34,6 +34,7 @@ h1, h2, h3{
 }
 .left{float: left;}
 .right{float: right;}
+.clear{clear: both}
 
 .block-slide{
   //height: 100%;
@@ -53,7 +54,6 @@ h1, h2, h3{
 .btn-main{
   border: 1px solid #fff;
   background: rgba(0,0,0,0.5);
-  padding: 10px 40px;
   text-align: center;
   font-size: 1.5em;
   color: #fff;
@@ -123,13 +123,14 @@ h1, h2, h3{
     }
     .text-block{
       padding-top: 250px;
+      margin-bottom: 100px;
       .btn-block{margin-top: 50px;}
     }
     .bottom-block{
       color: @white;
       padding: 50px;
       position: absolute;
-      width: 100%;
+      //width: 100%;
       bottom: 0;
     }
     .btn-main{

@@ -49,7 +49,8 @@
 	<main>
 		<section id="mainpage" data-type="background" data-speed="5" class="block-slide pages">
 			<article id="main-slide">
-				<div class="text-block">
+				<div class="text-block col-xs-12">
+					<div class="row">
 					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 cadre">
 						<div class="col-xs-12">
 							<h1>Наши идеи и опыт<br> работают на ваш бизнес</h1>
@@ -61,9 +62,11 @@
 							<a href="#" class="btn btn-main">Заказать конкурентов</a>
 						</div>
 					</div>
+					</div>
 				</div>
-				<div class="bottom-block row">
-					<div class="col-xs-6">
+				<div class="bottom-block col-xs-12">
+					<div class="row">
+					<div class="col-xs-12 col-sm-6">
 						<p class="social">
 							<i class="ico-social vk"></i>
 							<i class="ico-social fb"></i>
@@ -71,11 +74,12 @@
 						</p>
 					</div>
 
-					<div class="col-xs-6 text-right">
+					<div class="col-xs-12 col-sm-6 text-right">
 						<p>Рекламное агенство<br> Happer media</p>
 					</div>
-
+					</div>
 				</div>
+				<div class="clear"></div>
 			</article>
 			<article id="services" >
 				<div class="container">
