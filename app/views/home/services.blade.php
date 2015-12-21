@@ -8,10 +8,11 @@
 @stop
 
 @section('content')
+    <section id="mainpage" data-type="background" data-speed="5" class="block-slide pages">
+        <div class="menu-page"></div>
+        <div id="content-services" class="content-page">
 
-   <div id="content-style" class="container">
-
-    <div class="row">
+        <div class="container">
 
         @if(isset($posts)&&count($posts)>0)
             <!--
@@ -50,7 +51,6 @@
             @endif
 
             @if(!empty($row))
-                <h1>{{ $row->name  }} стиль</h1>
                 @if(!empty($row->image))
                     {{ HTML::image($row->image, '') }}
                     {{ $row->text }}
@@ -65,33 +65,13 @@
 
         </div>
 
-        <div class="col-xs-12" id="tegs">
-            <ul class="">
-                @foreach($posts as $post)
-                    <li {{ (Request::is( $type->type.'/'.$post->slug)) || (!empty($row)&&$row->parent==$post->id)? 'class="active"' : '' }} >
-                        {{ HTML::link('/'.$type->type.'/'.$post->slug, '#'.$post->name) }}
 
-                        @if(isset($posts_child)&&count($posts_child)>0)
-                            <ul>
-                                @foreach($posts_child as $post_ch)
-                                    @if(($post_ch->parent == $post->id) )
-                                        <li {{ (Request::is( $type->type.'/'.$post_ch->slug)) ? 'class="active"' : '' }}>
-                                           {{ HTML::link('/'.$type->type.'/'.$post_ch->slug, $post_ch->name) }}
-                                        </li>
-                                    @endif
-                                @endforeach
-                            </ul>
-                        @endif
-                    </li>
-                @endforeach
-            </ul>
+
         </div>
 
+        </div>
 
-
-    </div>
-
-    </div>
+    </section>
 
 @stop
 

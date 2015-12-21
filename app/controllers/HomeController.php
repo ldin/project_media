@@ -16,7 +16,7 @@ class HomeController extends BaseController {
     */
     protected function setupLayout()
     {
-        $type_page=Type::where('status',1)->lists('name', 'type');
+        $type_page=Post::where('status',1)->where('type_id',4)->lists('name', 'slug');
         $settings = Setting::lists('value', 'name');
 
         View::share([

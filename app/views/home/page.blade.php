@@ -6,6 +6,8 @@
 
 @section('content')
 
+    <section id="mainpage" data-type="background" data-speed="5" class="block-slide pages">
+
     <div id="content" class="container">
 
     <div class="row">
@@ -91,7 +93,7 @@
     </div>
 
     </div>
-
+    </section>
 @stop
 
 
