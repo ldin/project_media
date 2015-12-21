@@ -55,7 +55,7 @@
                     {{ HTML::image($row->image, '') }}
                     {{ $row->text }}
                 @else
-                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                    <div class="col-xs-12">
                         {{ $row->text }}
                     </div>
 
