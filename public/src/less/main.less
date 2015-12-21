@@ -25,7 +25,7 @@
   src: url(../fonts/proxima-nova/ProximaNovaLight.otf) format("opentype");
 }
 
-html, body{font-family: Helvetica, Arial, sans-serif}
+html, body{font-family: Helvetica, Arial, sans-serif; font-size: 16px;}
 //html, body{font:normal normal 14px 'ProximaNova', Open Sans, Helvetica, sans-serif; font-size: 16px;}
 h1, h2, h3{
   text-shadow: 1px 1px 1px black;
@@ -75,9 +75,12 @@ h1, h2, h3{
     li > a:hover{background: none;}
     a{
       color: @white;
-      text-decoration: underline;
       margin-top: 20px;
       &.logo{margin-top: 0}
+      font-size: 1.1em;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
   .navbar-toggle{
@@ -105,18 +108,21 @@ h1, h2, h3{
         content: '';
         width: 127px;
         height: 55px;
-        display: block;
+        position: absolute;
         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAA3CAMAAAASaGUgAAAA51BMVEUAAAAYo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo24Yo27///9FG4vpAAAAS3RSTlMAAQMGBwgJCg0cHiMkKi8yNDY6PUpQV1xgZWtsb3B2eoCCh4iRlJWWmJ2en6Kkp6irrK+ytbe+v8DEzdXa3uDj8PH19vj5+vv8/f4OmxsOAAAA50lEQVR4Ae3N1zbFYBAF4O3EOQrRe4kueu+EICLM+7+Ptbj4JytuM/tmvhf4QLAugf9t8t9///3333///ffff/83yf9O6HPGfxX+F8b/HP57Qj8kwQHhX1R/Qvjv1D9t38eqf4/s/1P1X9v3U6IsmPe9R9W/DZr/+6Icmfdruv+OrftEtDPjvT8V7TO27ccepGbLdB/erep9NmCXd2dOSqkrJ/Frtm3zS9s3hTSs4o9wHPZR/8sIzP88AvNPOyD+H8sA8X8aB/EvNrrg/dXxCED7X9NRNJjlF3M9gPB/5dnt3spEB//6AaAZEtVkvfZ+AAAAAElFTkSuQmCC);
       }
       &:after{
-        margin-left: 90%;
+        right: 0;
+        bottom: -60px;
       }
       &:before{
+        left: 0;
+        top: -30px;
         transform: rotate(180deg);
       }
     }
     .text-block{
-      padding-top: 200px;
+      padding-top: 250px;
       .btn-block{margin-top: 50px;}
     }
     .bottom-block{
@@ -125,6 +131,10 @@ h1, h2, h3{
       position: absolute;
       width: 100%;
       bottom: 0;
+    }
+    .btn-main{
+      width: 100%;
+      margin: 20px 0;
     }
   }
   #services{
@@ -142,7 +152,7 @@ h1, h2, h3{
       height: 237px;
       display: block;
       background: url(/images/ico/ico-services.png) no-repeat center;
-      margin-bottom: 20px;
+      margin: 0 auto 20px;
       &.analysis{background-position: 0 0}
       &.planning{background-position: -300px 0}
       &.design{background-position: -600px 0}

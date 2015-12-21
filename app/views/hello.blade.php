@@ -49,12 +49,15 @@
 	<main>
 		<section id="mainpage" data-type="background" data-speed="5" class="block-slide pages">
 			<article id="main-slide">
-				<div class="text-block row">
-					<div class="col-xs-12 col-sm-8 col-sm-offset-2 cadre">
-						<h1>Наши идеи и опыт<br> работают на ваш бизнес</h1>
-
-						<div class="text-center btn-block">
-							<a href="#" class="btn btn-main">Привлечь клиентов</a>
+				<div class="text-block">
+					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 cadre">
+						<div class="col-xs-12">
+							<h1>Наши идеи и опыт<br> работают на ваш бизнес</h1>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<a href="#" class="btn btn-main ">Привлечь клиентов</a>
+						</div>
+						<div class="col-xs-12 col-sm-6">
 							<a href="#" class="btn btn-main">Заказать конкурентов</a>
 						</div>
 					</div>
@@ -79,7 +82,7 @@
 					<div class="">
 						<h2>Наше предложение</h2>
 					</div>
-					<div class="row" id="services-ico">
+					<div id="services-ico" class="row text-center" >
 						<div class="col-xs-12 col-sm-4">
 							<div class="image analysis"></div>
 						</div>
@@ -127,7 +130,7 @@
 
 	<footer>
 		<div class="container">
-			<div class="row still">
+			<div class="still">
 				<div class="col-xs-12 col-sm-6">
 
 				</div>
