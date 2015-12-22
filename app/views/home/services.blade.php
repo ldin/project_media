@@ -9,7 +9,7 @@
 
 @section('content')
     <section id="mainpage" data-type="background" data-speed="5" class="block-slide pages">
-        <div class="menu-page"></div>
+        <div class="buffer-page"></div>
         <div id="content-services" class="content-page">
 
         <div class="container">
@@ -70,7 +70,7 @@
         </div>
 
         </div>
-
+    <div class="buffer-page"></div>
     </section>
 
 @stop
