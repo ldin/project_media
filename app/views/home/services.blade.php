@@ -21,26 +21,24 @@
                         </div>
                     </div>
                     @if(isset($posts_child)&&count($posts_child)>0)
-                        <div class="">
-                            <ul class="serve-preview row">
-                                @foreach($posts_child as $post_ch)
+                        <div class="serve-preview row">
+                            @foreach($posts_child as $post_ch)
 
-                                    <li class="col-xs-6 col-sm-4 col-md-1-5">
-                                        <div class="image">
-                                            {{ HTML::image('/upload/image/'.$post_ch->image, $post_ch->title)  }}
-                                        </div>
-                                        <h3>{{ HTML::link('/'.$type->type.'/'.$post_ch->slug, $post_ch->name) }}</h3>
-                                    </li>
+                                <div class="col-xs-6 col-sm-4 col-md-1-5">
+                                    <div class="image">
+                                        {{ HTML::image('/upload/image/'.$post_ch->image, $post_ch->title)  }}
+                                    </div>
+                                    <h3>{{ HTML::link('/'.$type->type.'/'.$post_ch->slug, $post_ch->name) }}</h3>
+                                </div>
 
-                                @endforeach
-                            </ul>
+                            @endforeach
                         </div>
                     @endif
                 </div>
             @elseif(!empty($row) && $row->parent!=0)
                 <div id="text-services" class="content-page">
                     <div class="row">
-                        <div class="col-xs-12 col-md-9 col-md-offset-1 bg-white">
+                        <div class="col-xs-12 col-md-8 col-md-offset-2 bg-white">
                             <h1>{{ $row->name }}</h1>
                             <div>{{ $row->text }}</div>
                         </div>
