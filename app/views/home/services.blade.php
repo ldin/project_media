@@ -34,6 +34,16 @@
                             @endforeach
                         </div>
                     @endif
+                    <div class="row btn-block">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 ">
+                            <div class="col-xs-12 col-sm-6">
+                                <a href="#" class="btn btn-main ">Заказать {{ $row->name }}</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <a href="#" class="btn btn-main">Перезвонить мне</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             @elseif(!empty($row) && $row->parent!=0)
                 <div id="text-services" class="content-page">

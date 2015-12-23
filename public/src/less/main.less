@@ -89,11 +89,18 @@ h2:after, .content-page h1:after {
 
 .btn-main{
   border: 1px solid #fff;
+  border-radius: 15px;
   background: rgba(0,0,0,0.5);
+  padding: 18px 0;
   text-align: center;
   font-size: 1.5em;
   color: #fff;
-  &:hover{background: @green;}
+  width: 100%;
+  &:hover{
+    background: @green;
+    border-color: @green;
+    color: @white;
+  }
 }
 
 #menu{
@@ -167,13 +174,17 @@ h2:after, .content-page h1:after {
     }
     .btn-main{
       width: 100%;
-      margin: 20px 0;
+      margin: 50px 0 20px;
     }
   }
   #services{
     background: rgba(0,0,0,0.75);
     position: relative;
     h2{margin: 50px 0;}
+    h3{font-size: 1.5em}
+    #services-ico > div{
+      margin-bottom: 20px;
+    }
   }
 
 
@@ -208,10 +219,10 @@ h2:after, .content-page h1:after {
 footer{
   background: rgba(0,0,0,0.7);
   color: @white;
-  height: 140px;
+  min-height: 180px;
   position: relative;
   padding-top: 40px;
-  margin-top: -140px;
+  margin-top: -180px;
   .still{
     width: 100%;
     img{
@@ -304,6 +315,9 @@ footer{
     & > div{
       height:220px;
     }
+  }
+  .btn-block{
+    margin-bottom: 50px;
   }
 }
 #text-services{
