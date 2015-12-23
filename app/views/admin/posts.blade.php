@@ -75,11 +75,11 @@
             <div class="form-group col-sm-4 col-xs-12">
                 {{ Form::label('inputImage', 'Изображение') }}
                 {{ Form::file('image') }}
-                <p class="info-txt">(только для шаблонов "картинка-текст")</p>
+                <p class="info-txt">(не для для шаблонов )</p>
                 @if(isset($row->image)&&($row->image))
                     <br>
                     <div class="img img-thumbnail">
-                        {{ HTML::image($row->image, 'img') }}
+                        {{ HTML::image('/upload/image/'.$row->image, 'img') }}
                     </div>
                 @endif
             </div>

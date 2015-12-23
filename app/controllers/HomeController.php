@@ -16,7 +16,7 @@ class HomeController extends BaseController {
     */
     protected function setupLayout()
     {
-        $type_page=Post::where('status',1)->where('type_id',4)->lists('name', 'slug');
+        $type_page=Post::where('status',1)->where('type_id',4)->where('parent',0)->lists('name', 'slug');
         $settings = Setting::lists('value', 'name');
 
         View::share([
@@ -76,6 +76,21 @@ class HomeController extends BaseController {
             }
             //var_dump($post->galleries);
         }
+
+         else if($type_post->template=='services'){
+             if($slug!=''){
+                $row = Post::where('slug',$slug)->first();
+                if($row->parent!=0){
+                    $parent = Post::where('id',$row->parent)->first();
+                    $row->parent_title=$parent->name;
+                    $row->parent_slug=$parent->slug;
+                }
+                $posts_child = Post::where('type_id',$type_post->id)->where('status',1)->where('parent', '=', $row->id)->orderBy('created_at', 'desc')->get();
+
+             }
+
+        }
+
         else{
             
             $posts = Post::where('type_id',$type_post->id)->where('status',1)->where('parent',0)->orderBy('created_at', 'desc')->get();

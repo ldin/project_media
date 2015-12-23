@@ -38,17 +38,6 @@
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="navbar-main-menu">
-                            <!--
-                            <ul class="nav navbar-nav">
-                                <li><a href="#">Анализ</a></li>
-                                <li><a href="#">Планирование</a></li>
-                                <li><a href="#">Дизайн</a></li>
-                                <li><a href="/" class="logo hidden-xs"><img src="/images/logo.png"></a></li>
-                                <li><a href="#">Проектирование</a></li>
-                                <li><a href="#">Производство</a></li>
-                                <li><a href="#">Продвижение</a></li>
-                            </ul>
-                            -->
                             <ul class="nav navbar-nav ">
                                 @if(isset($type_page))
                                     {{--<li><a href="/" class="logo hidden-xs"><img src="/images/logo.png"></a></li>--}}
@@ -72,16 +61,31 @@
     <footer>
 		<div class="container">
 			<div class="still">
-				<div class="col-xs-12 col-sm-6">
-
+				<div class="col-xs-12 col-sm-2">
+                    <img src="/images/logo.png">
 				</div>
-				<div class="col-xs-12 col-sm-6">
-					Ваша реклама может вызывать восторг или возмущение,
-					увлекать или провоцировать,
-					но прежде всего она должна продавать - работать на ваш бизнес,
-					а не только на публику.
-					Согласимся, что откатанные схемы продвижения стабильно и эффективно работают,
-					но вот вопрос: максимальный ли это результат для вашего бизнеса?
+				<div class="col-xs-12 col-sm-4">
+                    <img src="/images/ico/place.png">
+                    <p>
+                        Санкт-Петербург, Мойки 7<br>
+                        info@happer.ru<br>
+                        +7(812)649-17-43
+                    </p>
+				</div>
+                <div class="col-xs-12 col-sm-4">
+                    <img src="/images/ico/place.png">
+                    <p>
+                        Санкт-Петербург, Мойки 7<br>
+                        info@happer.ru<br>
+                        +7(812)649-17-43
+                    </p>
+				</div>
+                <div class="col-xs-12 col-sm-2">
+                     <p class="social">
+                        <i class="ico-social vk"></i>
+                        <i class="ico-social fb"></i>
+                        <i class="ico-social tw"></i>
+                     </p>
 				</div>
 			</div>
 		</div>

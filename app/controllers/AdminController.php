@@ -117,11 +117,7 @@ class AdminController extends BaseController {
             $post->keywords = $all['keywords'];
 
             if(isset($all['image'])){
-                $full_name = Input::file('image')->getClientOriginalName();
-                $filename=$full_name;
-                $path = 'upload/image/';
-                Input::file('image')->move($path, $filename);
-                $post->image = $path.$filename;
+                $post->image = AdminController::saveImage($all['image'], 'upload/image/', 250);
             }
 
             $post->save();
@@ -190,29 +186,36 @@ public function postImageGallery($type_id, $post_id, $image_id='add')
             }
             $post->text = $all['text'];
             $post->alt = $all['alt'];
-            
-            if(!empty($all['image'])){
-                $full_name = Input::file('image')->getClientOriginalName();
-                $filename=$full_name;
-                $path = 'upload/gallery/'.$post_id.'/';
-                $path_sm = 'upload/gallery/'.$post_id.'/small/';
-                if(!is_dir($path_sm)){
-                    mkdir($path_sm, 0777, true);
-                }
-                Input::file('image')->move($path, $filename);
-                $post->image = $path.$filename;
 
-                Image::make($path.$filename)->resize(300, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                })->save($path_sm.$filename);
-                $post->small_image = $path_sm.$filename;
+            if(!empty($all['image'])){
+                $path='upload/gallery/'.$post_id.'/';
+                $filename = AdminController::saveImage($all['image'], $path, 250);
+                $post->image = $path.$filename;
+                $post->small_image = $path.'small/'.$filename;
             }
             $post->save();
             return Redirect::to('/admin/content/'.$type_id.'/'.$post_id.'/#image-'.$image_id)
                     ->with('success-img'.$image_id, 'Изменения сохранены');
         }
 
+    public function saveImage( $object, $path, $sm_wh='300'){
+        if(empty($object) || empty($path)){return;}
 
+        $filename = Input::file('image')->getClientOriginalName();
+        $path_sm = $path.'small/';
+
+        if(!is_dir($path_sm)){
+            mkdir($path_sm, 0777, true);
+        }
+        Input::file('image')->move($path, $filename);
+
+        Image::make($path.$filename)->resize($sm_wh, null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($path_sm.$filename);
+
+        return $filename;
+
+    }
 //удаление страниц
     public function getDelete($type, $type_id, $id){
 
