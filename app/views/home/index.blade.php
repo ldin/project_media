@@ -71,6 +71,7 @@
                 </div>
             </div>
         </article>
+        <div class="buffer-page"></div>
     </section>
 
     <!--
