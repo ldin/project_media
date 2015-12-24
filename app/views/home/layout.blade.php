@@ -81,7 +81,7 @@
                         +7(812)649-17-43
                     </p>
 				</div>
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-12 col-sm-4 text-right">
                      <p class="social">
                         <i class="ico-social vk"></i>
                         <i class="ico-social fb"></i>
