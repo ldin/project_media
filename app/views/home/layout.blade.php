@@ -67,9 +67,10 @@
 				<div class="col-xs-12 col-sm-4">
                     <img src="/images/ico/building1.png" alt="building" class="hidden-xs">
                     <p>
-                        Санкт-Петербург, Мойки 7<br>
+                        United States<br>
+                        1305 SE Fort Lauderdale,<br>
+                        FL 33301 USA<br>
                         info@happer.ru<br>
-                        +7(812)649-17-43
                     </p>
 				</div>
                 <div class="col-xs-12 col-sm-4">
