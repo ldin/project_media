@@ -62,10 +62,10 @@
 		<div class="container">
 			<div class="still">
 				<div class="col-xs-12 col-sm-2">
-                    <img src="/images/logo.png">
+                    <img src="/images/logo.png" alt="logo" class="hidden-xs">
 				</div>
 				<div class="col-xs-12 col-sm-4">
-                    <img src="/images/ico/place.png">
+                    <img src="/images/ico/building1.png" alt="building" class="hidden-xs">
                     <p>
                         Санкт-Петербург, Мойки 7<br>
                         info@happer.ru<br>
@@ -73,7 +73,7 @@
                     </p>
 				</div>
                 <div class="col-xs-12 col-sm-4">
-                    <img src="/images/ico/place.png">
+                    <img src="/images/ico/building2.png" alt="building" class="hidden-xs">
                     <p>
                         Санкт-Петербург, Мойки 7<br>
                         info@happer.ru<br>
