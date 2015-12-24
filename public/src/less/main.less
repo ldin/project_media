@@ -5,7 +5,8 @@
 @green: #2a80b9;
 
 html, body{
-  font-family: Helvetica, Arial, sans-serif;
+  //font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   padding: 0;
   margin: 0;
@@ -24,7 +25,7 @@ h3{font-size: 1.17em}
 .right{float: right;}
 .clear{clear: both}
 
-
+.content-page h1, h2{position: relative}
 h2:before, h2:after,
 .content-page h1:before,
 .content-page h1:after
@@ -39,11 +40,15 @@ h2:before, h2:after,
 }
 h2:before, .content-page h1:before {
   margin: -20px 0 0 -40px;
+  //top: 0;
+  //left: 0;
 
 }
 h2:after, .content-page h1:after {
   transform: scale(-1,1);
   margin: -20px 0 0 10px;
+  //top: 0;
+  //right: 0;
 }
 :focus{outline: none}
 

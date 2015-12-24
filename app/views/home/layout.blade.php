@@ -6,7 +6,7 @@
 
     <title>@yield('title')</title>
 
-    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+     <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/main.css?01" rel="stylesheet">
