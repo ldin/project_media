@@ -51,28 +51,40 @@
                 </div>
                 <div id="services-ico" class="row text-center" >
                     <div class="col-xs-12 col-sm-4">
-                        <div class="image analysis"></div>
-                        <h3>Анализ</h3>
+                        <a href="/services/analysis">
+                            <div class="image analysis"></div>
+                            <h3>Анализ</h3>
+                        </a>
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <div class="image planning"></div>
-                        <h3>Планирование</h3>
+                        <a href="/services/planning">
+                            <div class="image planning"></div>
+                            <h3>Планирование</h3>
+                        </a>
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <div class="image design"></div>
-                        <h3>Дизайн</h3>
+                        <a href="/services/design">
+                            <div class="image design"></div>
+                            <h3>Дизайн</h3>
+                        </a>
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <div class="image projection"></div>
-                        <h3>Проектирование</h3>
+                        <a href="/services/development">
+                            <div class="image projection"></div>
+                            <h3>Проектирование</h3>
+                        </a>
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <div class="image production"></div>
-                        <h3>Производство</h3>
+                        <a href="/services/production">
+                            <div class="image production"></div>
+                            <h3>Производство</h3>
+                        </a>
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <div class="image promotion"></div>
-                        <h3>Продвижение</h3>
+                        <a href="/services/promotion">
+                            <div class="image promotion"></div>
+                            <h3>Продвижение</h3>
+                        </a>
                     </div>
                 </div>
             </div>
