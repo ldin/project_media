@@ -67,7 +67,7 @@ h2:after, .content-page h1:after {
   }
 }
 .bg-white{
-  background: rgba(255,255,255,0.9);
+  background: #ffffff;
   padding: 50px;
   h1, h2, h3{color: @black; text-shadow: none}
 }
@@ -162,32 +162,50 @@ h2:after, .content-page h1:after {
       margin: 50px 0 20px;
     }
   }
-  #services{
-    background: rgba(0,0,0,0.75);
-    position: relative;
-    a{color: @white;}
-    h2{margin: 50px 0; font-size: 1.8em}
-    h3{font-size: 1.5em}
-    #services-ico > div{
-      margin-bottom: 20px;
-    }
+
+}
+
+.block-services{
+  //background: #032C46;
+  background: #000;
+  position: relative;
+  box-shadow: 0 0 20px #6b6b6b;
+  a{color: @white;}
+  h2{margin: 50px 0; font-size: 1.8em}
+  h3{font-size: 1.5em}
+  #services-ico > div{
+    margin-bottom: 20px;
   }
+}
 
+#description{
+  //background: url('/images/bg/bg-4-wb.jpg');
+  background: #fff;
+  background-size: cover;
+  color: #000;
+  padding: 50px 0;
+  min-height: 500px;
+}
 
-  #services-ico{
-    .image{
-      width: 300px;
-      height: 237px;
-      display: block;
-      background: url(/images/ico/ico-services.png) no-repeat center;
-      margin: 0 auto 20px;
-      &.analysis{background-position: 0 0}
-      &.planning{background-position: -300px 0}
-      &.design{background-position: -600px 0}
-      &.projection{background-position: 0 -245px}
-      &.production{background-position: -300px -245px}
-      &.promotion{background-position: -600px -245px}
-    }
+#description2{
+  background: @white;
+  padding: 50px 0;
+  min-height: 50px;
+}
+
+#services-ico{
+  .image{
+    width: 300px;
+    height: 237px;
+    display: block;
+    background: url(/images/ico/ico-services.png) no-repeat center;
+    margin: 0 auto 20px;
+    &.analysis{background-position: 0 0}
+    &.planning{background-position: -300px 0}
+    &.design{background-position: -600px 0}
+    &.projection{background-position: 0 -245px}
+    &.production{background-position: -300px -245px}
+    &.promotion{background-position: -600px -245px}
   }
 }
 
@@ -278,8 +296,11 @@ footer{
 }
 #content-services{
   color: @white;
-  h1{margin-bottom: 50px}
-  h3 a{color: @white;}
+  h1{
+    margin-bottom: 50px;
+    position: relative;
+  }
+  a{color: @white;}
   .serve-preview{
     margin: 50px 0;
     .image{
@@ -305,11 +326,14 @@ footer{
     }
     .image:before {
       margin: -22px 0 0 -25px;
+      //left: 0;
+      //top: 0;
     }
     .image:after {
       transform:rotate(180deg);
       margin: 0 0 -2px -49px;
       bottom: 0;
+      //top: 0;
     }
     & > div{
       height:220px;

@@ -44,7 +44,21 @@
             </div>
             <div class="clear"></div>
         </article>
-        <article id="services" >
+    </section>
+    <section>
+        <article id="description" >
+            <div class="container">
+                <div>
+                    <p>
+                        Happer International Media предлагает привлечь новых клиентов для Вашего бизнеса. Мы поможем извлечь максимум результата из каждого потраченного на рекламу цента. Мы откроем новые перспективы для развития бизнеса, предлагая уникальные Маркетинговые решения.
+                    </p>
+                    <p>
+                        Happer International Media подготовила и провела сотни рекламных компаний в Соединенных Штатах Америки, странах Европы и Азии. Теперь и у Вас есть возможность воспользоваться уникальным опытом нашей команды для продвижения Вашего брэнда.
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article id="services" class="block-services">
             <div class="container">
                 <div class="">
                     <h2>Наше предложение</h2>
@@ -68,6 +82,7 @@
                             <h3>Дизайн</h3>
                         </a>
                     </div>
+
                     <div class="col-xs-12 col-sm-4">
                         <a href="/services/development">
                             <div class="image projection"></div>
@@ -89,6 +104,7 @@
                 </div>
             </div>
         </article>
+
         {{--<div class="buffer-page"></div>--}}
     </section>
 @stop

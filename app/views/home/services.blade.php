@@ -25,10 +25,12 @@
                             @foreach($posts_child as $post_ch)
 
                                 <div class="col-xs-6 col-sm-4 col-md-1-5">
+                                    <a href="{{'/'.$type->type.'/'.$post_ch->slug}}" >
                                     <div class="image">
                                         {{ HTML::image('/upload/image/'.$post_ch->image, $post_ch->title)  }}
                                     </div>
-                                    <h3>{{ HTML::link('/'.$type->type.'/'.$post_ch->slug, $post_ch->name) }}</h3>
+                                    <h3>{{ $post_ch->name }}</h3>
+                                    </a>
                                 </div>
 
                             @endforeach
