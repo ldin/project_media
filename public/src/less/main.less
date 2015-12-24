@@ -2,7 +2,7 @@
 @black: #000000;
 @white: #ffffff;
 @gray: #e9e9e9;
-@green: #18A36E;
+@green: #2a80b9;
 
 html, body{
   font-family: Helvetica, Arial, sans-serif;
@@ -51,6 +51,7 @@ h2:after, .content-page h1:after {
 .block-slide{
   background:@black 50% 0 no-repeat fixed;
   background-image: url("/images/bg/bg-1.jpg");
+  background-size: cover;
   min-height: 100vh;
   position: relative;
   box-shadow: 0 0 20px #6b6b6b;
@@ -60,8 +61,8 @@ h2:after, .content-page h1:after {
     width: 100%;
     height: 100%;
     position: absolute;
-    //background: rgba(0,0,0,0.3);
-    background: url("/images/bg/bg-ton-part.png") repeat;
+    background: rgba(0,0,0,0.9);
+    //background: url("/images/bg/bg-ton-part.png") repeat;
     opacity: 0.55;
   }
 }
