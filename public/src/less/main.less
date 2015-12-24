@@ -172,7 +172,7 @@ h2:after, .content-page h1:after {
   box-shadow: 0 0 20px #6b6b6b;
   a{color: @white;}
   h2{margin: 50px 0; font-size: 1.8em}
-  h3{font-size: 1.5em}
+  h3{font-size: 1.5em; margin-top: -40px}
   #services-ico > div{
     margin-bottom: 20px;
   }
@@ -187,12 +187,6 @@ h2:after, .content-page h1:after {
   min-height: 500px;
 }
 
-#description2{
-  background: @white;
-  padding: 50px 0;
-  min-height: 50px;
-}
-
 #services-ico{
   .image{
     width: 300px;
@@ -200,6 +194,7 @@ h2:after, .content-page h1:after {
     display: block;
     background: url(/images/ico/ico-services.png) no-repeat center;
     margin: 0 auto 20px;
+    transform: scale(0.8);
     &.analysis{background-position: 0 0}
     &.planning{background-position: -300px 0}
     &.design{background-position: -600px 0}
@@ -229,14 +224,15 @@ footer{
   background: @black;
   color: @white;
   min-height: 200px;
-  //position: relative;
-  //padding-top: 40px;
-  //margin-top: -180px;
   .still{
     width: 100%;
     img{
       float: left;
       margin-right: 20px;
+      transform: scale(0.8);
+    }
+    p{
+      margin-top: 20px;
     }
   }
 }
