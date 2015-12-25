@@ -18,10 +18,10 @@
                         <div class="col-xs-12">
                             <h1>Наши идеи и опыт<br> работают на ваш бизнес</h1>
                         </div>
-                        <div class="col-xs-12 col-sm-6">
+                        <div class="col-xs-12 col-md-6">
                             <a href="#" class="btn btn-main ">Привлечь клиентов</a>
                         </div>
-                        <div class="col-xs-12 col-sm-6">
+                        <div class="col-xs-12 col-md-6">
                             <a href="#" class="btn btn-main">Заказать конкурентов</a>
                         </div>
                     </div>
@@ -48,7 +48,10 @@
     <section>
         <article id="description" >
             <div class="container">
-                <div>
+                <div class="col-xs-12 col-sm-6 text-center">
+                    <img src="/images/happerblue-logo.png">
+                </div>
+                <div class="col-xs-12 col-sm-6">
                     <p>
                         Happer International Media предлагает привлечь новых клиентов для Вашего бизнеса. Мы поможем извлечь максимум результата из каждого потраченного на рекламу цента. Мы откроем новые перспективы для развития бизнеса, предлагая уникальные Маркетинговые решения.
                     </p>
@@ -58,7 +61,7 @@
                 </div>
             </div>
         </article>
-        <article id="services" class="block-services">
+        <article id="services" data-type="background" data-speed="5" class="block-slide pages block-services">
             <div class="container">
                 <div class="">
                     <h2>Наше предложение</h2>
