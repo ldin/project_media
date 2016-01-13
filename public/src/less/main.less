@@ -1,357 +1,211 @@
-@orange: #ff9000;
-@black: #000000;
+//Разметка шрифтов
+@line: 16px;
+
+.set-font(@font-size, @line-height: @line) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.set-margin(@margin-top: @line, @margin-bottom: @line) {
+  margin-top: @margin-top;
+  margin-bottom: @margin-bottom;
+}
+
+body {
+  font-family: sans-serif;
+  .set-font(@line * 0.6);
+}
+
+h1 {
+  .set-font(@line * 2, @line * 3);
+  .set-margin();
+  text-align: center;
+}
+
+h2 {
+  .set-font(@line * 1.5, @line * 2);
+  .set-margin();
+  text-align: center;
+}
+
+h3 {
+  .set-font(@line * 1.2, @line * 2);
+  .set-margin();
+}
+
+p{
+  .set-font(@line*0.8);
+}
+ul{
+  .set-margin();
+}
+li{
+  .set-font(@line * 0.8);
+  .set-margin(@line / 2, @line / 2)
+}
+/* Сетка */
+
+.grid {
+  background-image:
+          linear-gradient(
+                  to bottom,
+                  rgba(0, 0, 0, 0.3) 0%,
+                  transparent 5%,
+                  transparent 100%
+          );
+  background-size: 100% @line;
+}
+
+.grid h1,
+.grid h2,
+.grid h3,
+.grid li,
+.grid p {
+  background: rgba(185, 211, 250, 0.5);
+}
+
+//Базовая разметка
 @white: #ffffff;
-@gray: #e9e9e9;
-@green: #114466;
+@black: #000000;
+@brown: #664433;
+@dark: #32435d;
+@bg-gray: #f1f2f4;
 
+html, body, main, #mainpage{width: 100%; position: relative}
 
-body{background-color: @black}
-html, body{
-  //font-family: Helvetica, Arial, sans-serif;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
-}
-h1, h2, h3, h4, h5{
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-  color: @white;
-  font-size: 1em;
-}
-h1{font-size: 2em}
-h2{font-size: 1.5em}
-h3{font-size: 1.17em}
-
-.left{float: left;}
 .right{float: right;}
-.clear{clear: both}
+.left{float: left;}
 
-.content-page h1, h2{position: relative}
-h2:before, h2:after,
-.content-page h1:before,
-.content-page h1:after
-{
-  content: " ";
-  background: no-repeat;
-  background-image: url("/images/ico/arrow.png");
-  background-position: 0 -90px;
-  width: 38px; height: 19px;
-  position: absolute;
-
-}
-h2:before, .content-page h1:before {
-  margin: -20px 0 0 -40px;
-  //top: 0;
-  //left: 0;
-
-}
-h2:after, .content-page h1:after {
-  transform: scale(-1,1);
-  margin: -20px 0 0 10px;
-  //top: 0;
-  //right: 0;
-}
-:focus{outline: none}
-
-
-.block-slide{
-  background:@black 50% 0 no-repeat fixed;
-  background-image: url("/images/bg/happer_blue-2.jpg");
-  background-size: cover;
-  min-height: 100vh;
-  position: relative;
-  box-shadow: 0 0 20px #6b6b6b;
-
-  //&:before{
-  //  content: '';
-  //  width: 100%;
-  //  height: 100%;
-  //  position: absolute;
-  //  background: rgba(0,0,0,0.7);
-  //  //background: url("/images/bg/bg-ton-part.png") repeat;
-  //  //opacity: 0.55;
-  //}
-}
-.bg-white{
-  background: #ffffff;
-  padding: 50px;
-  h1, h2, h3{color: @black; text-shadow: none}
+.social i{
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  margin-right: 5px;
+  background: url(/images/ico/social-txt.png) no-repeat;
+  &.vk{background-position: 0 0}
+  &.fb{background-position: -26px 0}
+  &.tw{background-position: -52px 0}
 }
 
-.btn-main{
-  border: 1px solid #fff;
-  border-radius: 15px;
-  //background: rgba(0,0,0,0.5);
-  padding: 18px 0;
-  text-align: center;
-  font-size: 1.5em;
-  color: #fff;
+hr{
   width: 100%;
-  &:hover{
-    background: @green;
-    border-color: @green;
-    color: @white;
+  background: transparent;
+  border: none;
+  margin: 0;
+  &.angle{
+    height: 68px;
+    background: url("/images/bg/angle-bg-w.png") no-repeat ;
+    background-size:  100% 68px;
+    &.gray{
+      background-image: url("/images/bg/angle-bg-gr.png") ;
+    }
+  }
+  &.angle-invert{
+    height: 74px;
+    margin-top: -74px;
+    background-repeat: no-repeat;
+    background-size:  100% 74px;
+    background-image: url("/images/bg/angle-bg-inv-w.png") ;
+    &.gray{
+      background-image: url("/images/bg/angle-bg-inv-gr.png") ;
+    }
   }
 }
 
-#menu{
-  position: absolute;
-  width: 100%;
-  z-index: 5;
-  .nav{
-    width: 100%;
-    li{
-      width: 14%;
-      text-align: center;
-    }
-    li > a:hover, li > a:focus{background: none;}
-    a{
-      color: @white;
-      margin-top: 20px;
-      &.logo{margin-top: 0}
-      font-size: 1.1em;
-      &:hover{
-        text-decoration: underline;
-      }
+
+
+.paper{
+  background: url("/images/bg/bg-paper.jpg") no-repeat;
+  background-size:cover;
+}
+
+//Страничная разметка
+header{
+  //height: 20px;
+  .nav>li>a{
+    color: @brown;
+    text-decoration: underline;
+    &:hover{
+      color: @dark;
+      background-color: transparent;
+      text-decoration: underline;
     }
   }
   .navbar-toggle{
-    border-color: @white;
-    .icon-bar {border: 1px solid #fff;}
+    border-color: @brown;
+    .icon-bar {border: 1px solid @brown;}
   }
-
-}
-
-
-#mainpage{
-  #main-slide{
-    min-height: 100vh;
-    padding-bottom: 150px;
-    position: relative;
-    h1 {
-      color: @white;
-      text-align: center;
-      font-size: 3em;
-    }
-    .cadre{
-      &:before, &:after{
-        content: '';
-        width: 127px;
-        height: 55px;
-        position: absolute;
-        background-image: url("/images/ico/arrow.png");
-        background-position: 0 0;      }
-      &:after{
-        right: 0;
-        bottom: -60px;
-        transform: rotate(180deg);
-      }
-      &:before{
-        left: 0;
-        top: -30px;
-      }
-    }
-    .text-block{
-      padding-top: 250px;
-      margin-bottom: 100px;
-      .btn-block{margin-top: 50px;}
-    }
-    .bottom-block{
-      color: @white;
-      padding: 50px;
-      position: absolute;
-      //width: 100%;
-      bottom: 0;
-    }
-    .btn-main{
-      width: 100%;
-      margin: 50px 0 20px;
-    }
+  .logo{
+    margin-top: 10px;
   }
-
 }
-
-.block-services{
-  //background: #032C46;
-
-  background-image: url('/images/bg/happer_blue-2.jpg');
-  //background-position: top;
-  //background: #000;
-  //position: relative;
-  box-shadow: 0 0 20px #6b6b6b;
-  a{color: @white;}
-  h2{margin: 50px 0; font-size: 1.8em}
-  h3{font-size: 1.5em; margin-top: -40px}
-  #services-ico > div{
-    margin-bottom: 20px;
-  }
-  .image{max-width: 100%}
-}
-
-#description{
-  //background: url('/images/bg/bg-4-wb.jpg');
-  background: #fff;
+#slider{
+  background: #3c3c3c;
+  background-image: url("/images/bg/happer_06_4.jpg");
   background-size: cover;
-  color: #000;
-  padding: 50px 0;
-  min-height: 500px;
-  padding-top: 130px;
-  img{margin-top: 50px;}
+  min-height: 50vh;
+  color: @white;
+  margin-top: -50px;
+  &.triangle{z-index: -1;}
 }
+#setting-work{
+  padding: 20px 0 70px;
+  background-color: #DEE4E2;
 
-#services-ico{
-  .image{
-    width: 300px;
-    height: 237px;
+}
+#complex{
+  .nav-tabs>li {
+    float: none;
     display: block;
-    background: url(/images/ico/ico-services.png) no-repeat center;
-    margin: 0 auto 20px;
-    transform: scale(0.8);
-    &.analysis{background-position: 0 0}
-    &.planning{background-position: -300px 0}
-    &.design{background-position: -600px 0}
-    &.projection{background-position: 0 -245px}
-    &.production{background-position: -300px -245px}
-    &.promotion{background-position: -600px -245px}
-  }
-}
-
-.social i{
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  margin-right: 5px;
-  background: url(/images/ico/social.png) no-repeat;
-  &.vk{background-position: 0 0}
-  &.fb{background-position: -41px 0}
-  &.tw{background-position: -82px 0}
-}
-main{margin-bottom: 200px;}
-footer{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding-top: 50px;
-  z-index: -1;
-  background: @black;
-  color: @white;
-  min-height: 200px;
-  .still{
-    width: 100%;
-    img{
-      float: left;
-      margin-right: 20px;
-      transform: scale(0.8);
-    }
-    p{
-      margin-top: 20px;
-    }
-  }
-}
-
-@media(max-width: 768px){
-  #menu .navbar{
-    background: rgba(0,0,0,0.7);
-    .nav a {margin-top: 10px};
-  }
-  main { margin-bottom: 300px;}
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  #menu .nav a{ font-size: 0.8em;}
-}
-
-
-
-//pages
-.col-xs-1-5,
-.col-sm-1-5,
-.col-md-1-5,
-.col-lg-1-5 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.col-xs-1-5 {
-  width: 20%;
-  float: left;
-}
-@media (min-width: 768px) {
-  .col-sm-1-5 {
-    width: 20%;
-    float: left;
-  }
-}
-
-@media (min-width: 992px) {
-  .col-md-1-5 {
-    width: 20%;
-    float: left;
-  }
-}
-
-@media (min-width: 1200px) {
-  .col-lg-1-5 {
-    width: 20%;
-    float: left;
-  }
-}
-
-.buffer-page{
-  height: 180px;
-}
-#content-services{
-  color: @white;
-  h1{
-    margin-bottom: 50px;
-    position: relative;
-  }
-  a{color: @white;}
-  .serve-preview{
-    margin: 50px 0;
-    .image{
-      position: relative;
-      width: 120px;
-      height: 120px;
-      margin: 0 auto;
-      border-radius: 15px;
-      text-align: center;
-      padding-top: 20px;
-
+    padding: 10px;
+    &>a{
+      color: @dark;
+      background: transparent;
+      display: inline;
+      padding: 0;
+      border: none;
+      border-bottom: 1px dashed;
       &:hover{
-        background: @green;
+        border: none;
       }
     }
-    .image:before, .image:after{
-      content: " ";
-      background: no-repeat;
-      background-image: url("/images/ico/arrow.png");
-      background-position: 0 -57px;
-      width: 75px; height: 34px;
-      position: absolute;
-    }
-    .image:before {
-      margin: -22px 0 0 -25px;
-      //left: 0;
-      //top: 0;
-    }
-    .image:after {
-      transform:rotate(180deg);
-      margin: 0 0 -2px -49px;
-      bottom: 0;
-      //top: 0;
-    }
-    & > div{
-      height:220px;
+    &.active{
+      background: @bg-gray;;
     }
   }
-  .btn-block{
-    margin-bottom: 50px;
+  .tab-content{
+    color: @brown;
+    background: @bg-gray;
+    padding: 20px;
+  }
+  .block-left{padding-right: 0;}
+  .block-right{padding-left: 0;}
+}
+
+#services{
+  &.triangle{z-index: -1}
+  h2{ color: @dark; }
+  p{
+    color: @brown;
+    text-align: center;
+    .set-font(@line * 1.1, @line * 2);
   }
 }
-#text-services{
+#about{
+  background: url("/images/bg/bg-main-2.jpg") no-repeat;
+  background-size: cover;
+  color: @white;
+  h2{ color: @white; }
+}
 
+footer{
+  background: url("/images/bg/bg-footer.jpg");
+  background-size: cover;
+  color: @white;
+  .txt-block{padding-top: 50px;}
+  .social-block{padding: 0;}
+  .social{text-align: center; padding: 60px 0;}
+  hr.angle.gray{
+    transform: rotate(180deg);
+  }
 }

@@ -1,0 +1,32 @@
+//страшные углы
+.triangle {
+  position: relative;
+  z-index: 1;
+}
+.triangle:before {
+  border-right: 15000px solid transparent;
+  transform: translateX(-100%);
+}
+.triangle:before, .triangle:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 1670px solid #FFFFFF;
+  top: -1669px;
+  left: 50%;
+  z-index: -10;
+}
+.triangle:after {
+  border-left: 15000px solid transparent;
+
+}
+.triangle-invert:before, .triangle-invert:after {top: -1569px;}
+.triangle-invert:before{transform: translateX(-100%) rotate(180deg);}
+.triangle-invert:after{transform: rotate(180deg);}
+
+.paper.triangle:before, .paper.triangle:after {
+  border-bottom: 1670px solid #DEE4E2;
+}
+
+//страшные углы -- конец
