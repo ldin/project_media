@@ -165,7 +165,7 @@
 				<hr class="angle">
 				<div class="container pad-50">
 					<h2>Отдельные услуги</h2>
-					<div class="row text-center pad-20">
+					<div class="text-center pad-20">
 						<div class="col-xs-6 col-sm-4 col-md-2">
 							<div>
 								<img src="/images/ico/services/analisis-new.png" alt="analisis">
@@ -209,7 +209,7 @@
 				<hr class="angle gray">
 				<div class="container pad-50-100">
 					<h2>О компании</h2>
-					<div class="row">
+					<div class="">
 						<div class="col-xs-12 col-sm-6">
 							<img src="/images/logo-text-white.png" alt="happer medie">
 						</div>
@@ -240,8 +240,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-5">
-					<img src="/images/ico/build-1.png" alt="building" class="left">
-					<div class="left txt-block">
+					<div class="col-xs-4">
+						<img src="/images/ico/build-1.png" alt="building">
+					</div>
+					<div class="txt-block col-xs-8">
 						<p>
 							United States<br>
 							1305 SE Fort Lauderdale,<br>
@@ -258,14 +260,16 @@
 					</p>
 				</div>
 				<div class="col-xs-12 col-sm-5">
-					<img src="/images/ico/build-2.png" alt="building" class="right ">
-					<div class="right txt-block">
+					<div class="txt-block col-xs-8">
 						<p class="text-right">
 							Санкт-Петербург, Мойки 7<br>
 							info@happer.ru<br>
 							+7(812)649-17-43
 						</p>
-					<div>
+					</div>
+					<div class="col-xs-4">
+						<img src="/images/ico/build-2.png" alt="building">
+					</div>
 				</div>
 			</div>
 		</div>
