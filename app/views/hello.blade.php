@@ -49,11 +49,11 @@
 	</header>
 	<main>
 		<section id="main-page">
-			<article id="slider" class="triangle triangle-invert">
+			<article id="slider" data-type="background" data-speed="10" class="pages">
 				<hr class="angle">
 				<div class="container">
 					<div class="col-xs-12 col-sm-3">
-						<img src="/images/logo.png">
+						<img src="/images/logo-200x170.png" alt="logo happer" class="logo">
 
 					</div>
 					<div class="col-xs-12 col-sm-9">
@@ -67,9 +67,12 @@
 			<article id="setting-work" class="triangle paper">
 				<div class="container">
 					<h2>Настроем работу бизнеса для воплощения ваших целей.</h2>
-					<p>
-						Мы предлагаем комплексный подход используя маркетинговые решения для эффективной работы бизнеса на вас.
-						Мы оцениваем ситуацию исходя из Ваших желаний и дальнейших жизненных целей.Мы меняем бизнес для вас, для скорейшего достижения ваших истинных целей. Наша задача избавить вас от лишних забот и вплотную приблизить вас  к осуществлению задуманного. Один звонок может поменять многое.
+					<p class="text-center">
+						Мы предлагаем комплексный подход используя маркетинговые решения для эффективной работы бизнеса на вас.<br>
+						Мы оцениваем ситуацию исходя из Ваших желаний и дальнейших жизненных целей.<br>
+						Мы меняем бизнес для вас, для скорейшего достижения ваших истинных целей. <br>
+						Наша задача избавить вас от лишних забот и вплотную приблизить вас  к осуществлению задуманного. <br>
+						Один звонок может поменять многое.<br>
 					</p>
 				</div>
 			</article>
@@ -79,26 +82,26 @@
 					<h2>Комплексные решения</h2>
 
 					<div id="complex-services" class="row">
-						<div class="col-xs-12 col-sm-3 block-left">
+						<div class="col-xs-12 col-sm-5 col-md-3 block-left">
 							  <!-- Nav tabs -->
 							<ul class="nav nav-tabs" role="tablist">
-								<li role="presentation" class="active"><a href="#complex-communications" aria-controls="complex-communications" role="tab" data-toggle="tab">Коммуникации с потребителями</a> <i class="glyphicon glyphicon-menu-right"></i></li>
-								<li role="presentation"><a href="#complex-society" aria-controls="complex-society" role="tab" data-toggle="tab">Коммуникации с общественностью</a> <i class="glyphicon glyphicon-menu-right"></i></li>
-								<li role="presentation"><a href="#complex-internal" aria-controls="complex-internal" role="tab" data-toggle="tab">Внутренняя среда компании</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
-								<li role="presentation"><a href="#complex-media" aria-controls="complex-media" role="tab" data-toggle="tab">Работа со СМИ</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
-								<li role="presentation"><a href="#complex-online" aria-controls="complex-online" role="tab" data-toggle="tab">Бизнес Онлайн</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
-								<li role="presentation"><a href="#complex-revenue" aria-controls="complex-revenue" role="tab" data-toggle="tab">Быстрое поднятие выручки</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
-								<li role="presentation"><a href="#complex-start" aria-controls="complex-start" role="tab" data-toggle="tab">Быстрый старт</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
-								<li role="presentation"><a href="#complex-event" aria-controls="complex-event" role="tab" data-toggle="tab">Организация мероприятий</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
+								<li role="presentation" class="active"><i class="complex communications"></i><a href="#complex-communications" aria-controls="complex-communications" role="tab" data-toggle="tab">Коммуникации с потребителями</a> <i class="glyphicon glyphicon-menu-right"></i></li>
+								<li role="presentation"><i class="complex society"></i><a href="#complex-society" aria-controls="complex-society" role="tab" data-toggle="tab">Коммуникации с общественностью</a> <i class="glyphicon glyphicon-menu-right"></i></li>
+								<li role="presentation"><i class="complex internal"></i><a href="#complex-internal" aria-controls="complex-internal" role="tab" data-toggle="tab">Внутренняя среда компании</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
+								<li role="presentation"><i class="complex media"></i><a href="#complex-media" aria-controls="complex-media" role="tab" data-toggle="tab">Работа со СМИ</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
+								<li role="presentation"><i class="complex online"></i><a href="#complex-online" aria-controls="complex-online" role="tab" data-toggle="tab">Бизнес Онлайн</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
+								<li role="presentation"><i class="complex revenue"></i><a href="#complex-revenue" aria-controls="complex-revenue" role="tab" data-toggle="tab">Быстрое поднятие выручки</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
+								<li role="presentation"><i class="complex start"></i><a href="#complex-start" aria-controls="complex-start" role="tab" data-toggle="tab">Быстрый старт</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
+								<li role="presentation"><i class="complex event"></i><a href="#complex-event" aria-controls="complex-event" role="tab" data-toggle="tab">Организация мероприятий</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
 							</ul>
 						</div>
 
-						<div class="col-xs-12 col-sm-9 block-right">
+						<div class="col-xs-12 col-sm-7 col-md-9 block-right">
 							<!-- Tab panes -->
 							<div class="tab-content">
 								<div role="tabpanel" class="tab-pane fade in active" id="complex-communications">
 										<div class="row">
-											<div class="col-xs-12 col-sm-8">
+											<div class="col-xs-12 col-md-8">
 												<h3>Задачи в рамках раздела:</h3>
 												<ul>
 													<li>Описываем нишу</li>
@@ -113,7 +116,7 @@
 													<li>опрос существующих клиентов</li>
 												</ul>
 											</div>
-											<div class="col-xs-12 col-sm-4">
+											<div class="col-xs-12 col-md-4">
 												<h3>Результат:</h3>
 												<p>отчет с заключениями, предложения по стратегии коммуникации</p>
 												<p class="big">Стоимость:<br><b>60 000 рублей</b></p>
@@ -125,7 +128,7 @@
 									</div>
 								<div role="tabpanel" class="tab-pane fade" id="complex-society">
 									<div class="row">
-										<div class="col-xs-12 col-sm-8">
+										<div class="col-xs-12 col-md-8">
 											<h3>Задачи в рамках раздела:</h3>
 											<ul>
 												<li>Анализируем задачи компании</li>
@@ -136,7 +139,7 @@
 												<li>Работа с существующими мнениями и отзывами, стратеги по улучшению.</li>
 											</ul>
 										</div>
-										<div class="col-xs-12 col-sm-4">
+										<div class="col-xs-12 col-md-4">
 											<h3>Результат:</h3>
 											<p>Сводный анализ, составленные тексты о компании или продукты, размещение информации в СМИ, Анализ полученной обратной связи, отчет о предложениях со стороны потребител.</p>
 											<p>Стоимость:<br> <b>120 000 рублей.</b></p>
@@ -160,9 +163,9 @@
 			</article>
 			<article id="services" class="paper">
 				<hr class="angle">
-				<div class="container ">
+				<div class="container pad-50">
 					<h2>Отдельные услуги</h2>
-					<div class="row text-center">
+					<div class="row text-center pad-20">
 						<div class="col-xs-6 col-sm-4 col-md-2">
 							<div>
 								<img src="/images/ico/services/analisis-new.png" alt="analisis">
@@ -202,9 +205,9 @@
 					</div>
 				</div>
 			</article>
-			<article id="about">
+			<article id="about"  data-type="background" data-speed="30" class="pages">
 				<hr class="angle gray">
-				<div class="container">
+				<div class="container pad-50-100">
 					<h2>О компании</h2>
 					<div class="row">
 						<div class="col-xs-12 col-sm-6">
@@ -220,16 +223,19 @@
 				</div>
 			</article>
 			<hr class="angle-invert" >
-			<article>
-				<div class="container">
+			<article id="goals">
+				<div class="container pad-50">
 					<h2>Вы платите за цели</h2>
-					<p>Работая по системе тайм материал (по англ) мы имеем прозрачное ценообразование - вы платите только за время работы специалиста над вашим проектом. Мы бережно относимся к вашим затратам. И после у нас есть ваши клиенты.</p>
+					<p class="text-center">
+						Работая по системе тайм материал (по англ) мы имеем прозрачное ценообразование - вы платите только за время работы специалиста над вашим проектом.<br>
+						Мы бережно относимся к вашим затратам. И после у нас есть ваши клиенты.
+					</p>
 				</div>
 			</article>
 		</section>
 	</main>
 
-	<footer>
+	<footer data-type="background" data-speed="0" class="pages">
 		<hr class="angle">
 		<div class="container">
 			<div class="row">
@@ -281,6 +287,16 @@
 				e.preventDefault()
 				$(this).tab('show')
 			})
+
+			//Parallax Scrolling animation
+			$('[data-type="background"]').each(function(){
+				var $bgobj = $(this);
+				$(window).scroll(function() {
+					var yPos = -($(window).scrollTop() / $bgobj.data('speed'));
+					var coords = 'center '+ yPos + 'px';
+					$bgobj.css({ backgroundPosition: coords });
+				});
+			});
 		});
 	</script>
 

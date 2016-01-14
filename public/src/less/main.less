@@ -1,4 +1,26 @@
 //Разметка шрифтов
+@font-face {
+  font-family: 'Lato';
+  font-weight: normal;
+  src: url(../fonts/lato/9622.ttf);
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: bold;
+  src: url(../fonts/lato/9623.ttf);
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  src: url(../fonts/lato/9624.ttf);
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 100;
+  src: url(../fonts/lato/9625.ttf);
+}
+
+
 @line: 16px;
 
 .set-font(@font-size, @line-height: @line) {
@@ -12,56 +34,36 @@
 }
 
 body {
-  font-family: sans-serif;
-  .set-font(@line * 0.6);
+  font-family: 'Lato', sans-serif;
+  .set-font(@line* 0.8);
 }
 
 h1 {
-  .set-font(@line * 2, @line * 3);
-  .set-margin();
+  .set-font(@line * 3.5, @line * 4);
+  .set-margin(@line * 2, @line * 2);
   text-align: center;
 }
 
 h2 {
-  .set-font(@line * 1.5, @line * 2);
-  .set-margin();
+  .set-font(@line * 2.8, @line * 3);
+  .set-margin(@line * 2, @line * 2);
   text-align: center;
 }
 
 h3 {
-  .set-font(@line * 1.2, @line * 2);
+  .set-font(@line * 2, @line * 2);
   .set-margin();
 }
 
 p{
-  .set-font(@line*0.8);
+  .set-font(@line*1.1, @line*1.5);
 }
 ul{
   .set-margin();
 }
 li{
-  .set-font(@line * 0.8);
+  .set-font(@line);
   .set-margin(@line / 2, @line / 2)
-}
-/* Сетка */
-
-.grid {
-  background-image:
-          linear-gradient(
-                  to bottom,
-                  rgba(0, 0, 0, 0.3) 0%,
-                  transparent 5%,
-                  transparent 100%
-          );
-  background-size: 100% @line;
-}
-
-.grid h1,
-.grid h2,
-.grid h3,
-.grid li,
-.grid p {
-  background: rgba(185, 211, 250, 0.5);
 }
 
 //Базовая разметка
@@ -75,6 +77,8 @@ html, body, main, #mainpage{width: 100%; position: relative}
 
 .right{float: right;}
 .left{float: left;}
+
+.pad-50{padding: 50px 0;}
 
 .social i{
   width: 26px;
@@ -125,7 +129,7 @@ header{
   .nav>li>a{
     color: @brown;
     text-decoration: underline;
-    &:hover{
+    &:hover, &:focus{
       color: @dark;
       background-color: transparent;
       text-decoration: underline;
@@ -140,20 +144,29 @@ header{
   }
 }
 #slider{
-  background: #3c3c3c;
-  background-image: url("/images/bg/happer_06_4.jpg");
+  background: #7A5F49  url("/images/bg/happer_06_4.jpg") center 0 no-repeat fixed;
   background-size: cover;
-  min-height: 50vh;
+  min-height: 75vh;
   color: @white;
-  margin-top: -50px;
+  margin-top: -25px;
   &.triangle{z-index: -1;}
+  .container{margin-top: 15%}
+  .logo{max-width: 100%;}
+  .h1 {
+    .set-font(@line * 3.5, @line * 3);
+    .set-margin();
+  }
 }
 #setting-work{
   padding: 20px 0 70px;
   background-color: #DEE4E2;
-
+  color: @brown;
+  h2{color: @dark;}
 }
 #complex{
+  .nav-tabs {
+    border-bottom: none;
+  }
   .nav-tabs>li {
     float: none;
     display: block;
@@ -165,6 +178,7 @@ header{
       padding: 0;
       border: none;
       border-bottom: 1px dashed;
+      .set-font(@line * 1.4, @line * 1.4);
       &:hover{
         border: none;
       }
@@ -180,6 +194,21 @@ header{
   }
   .block-left{padding-right: 0;}
   .block-right{padding-left: 0;}
+  i.complex{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("/images/ico/complex.png") no-repeat;
+    &.communications{background-position: 0 0}
+    &.society{background-position: 0 0}
+    &.internal{background-position: -30px 0}
+    &.media{background-position: -60px 0}
+    &.online{background-position: -90px 0}
+    &.revenue{background-position: -120px 0}
+    &.start{background-position: -150px 0}
+    &.event{background-position: -180px 0}
+  }
 }
 
 #services{
@@ -190,17 +219,25 @@ header{
     text-align: center;
     .set-font(@line * 1.1, @line * 2);
   }
+  .pad-20{padding: 20px 0;}
 }
 #about{
-  background: url("/images/bg/bg-main-2.jpg") no-repeat;
+  background: #42230E url("/images/bg/bg-main-2.jpg") center 0 no-repeat fixed;
   background-size: cover;
   color: @white;
   h2{ color: @white; }
+  .pad-50-100{padding: 50px 0 100px;}
+}
+
+#goals{
+  color: @brown;
+  h2{color: @dark}
 }
 
 footer{
-  background: url("/images/bg/bg-footer.jpg");
+  background: #8C6546 url("/images/bg/bg-footer-big.jpg") center 0 no-repeat fixed;
   background-size: cover;
+  background-position: top left,bottom left;
   color: @white;
   .txt-block{padding-top: 50px;}
   .social-block{padding: 0;}
@@ -208,4 +245,8 @@ footer{
   hr.angle.gray{
     transform: rotate(180deg);
   }
+}
+
+@media(max-width: 768px){
+  header .nav>li>a {text-align: center;}
 }
