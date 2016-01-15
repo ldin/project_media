@@ -77,7 +77,7 @@ class HomeController extends BaseController {
             //var_dump($post->galleries);
         }
 
-         else if($type_post->template=='services'){
+         else if($type_post->template=='uslugi'){
              if($slug!=''){
                 $row = Post::where('slug',$slug)->first();
                 if($row->parent!=0){
@@ -86,10 +86,19 @@ class HomeController extends BaseController {
                     $row->parent_slug=$parent->slug;
                 }
                 $posts_child = Post::where('type_id',$type_post->id)->where('status',1)->where('parent', '=', $row->id)->orderBy('created_at', 'desc')->get();
-
+             }
+             else{
+                 $posts = Post::where('type_id',$type_post->id)->where('status',1)->where('parent',0)->orderBy('order', 'asc')->get();
+//                 var_dump($posts); die();
              }
 
-        }
+         }
+
+         else if($type_post->template=='services'){
+             if($slug =='separate'){
+                 $type_post->template = 'services-separate';
+             }
+         }
 
         else{
             

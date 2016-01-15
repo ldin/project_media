@@ -6,7 +6,7 @@
 
     <title>@yield('title')</title>
 
-     <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/main.css?01" rel="stylesheet">
@@ -21,83 +21,93 @@
  </head>
 
 <body>
-    <div class="wappers">
-        <header>
-            <div id="menu" class="">
-                <div class="">
-                    <nav class="navbar ">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-menu" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
+	<header>
+		<div id="menu" class="">
+			<div class="container">
+				<nav class="navbar ">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-menu" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						<img src="/images/logo-text.png" class="logo">
+					</div>
 
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="navbar-main-menu">
-                            <ul class="nav navbar-nav ">
-                                @if(isset($type_page))
-                                    {{--<li><a href="/" class="logo hidden-xs"><img src="/images/logo.png"></a></li>--}}
-                                    <?php $k=0 ?>
-                                    @foreach($type_page as $type=>$page)
-                                        <?php if($k++ == 3){echo ("<li><a href='/' class='logo hidden-xs'><img src='/images/logo.png'></a></li>"); } ?>
-                                        <li {{ (Request::is('/services'.$type.'*')) ? 'class="active"' : '' }}>{{HTML::link('/services/'.$type, $page)}}</li>
-                                    @endforeach
-                                @endif
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </nav>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="navbar-main-menu">
+					  <ul class="nav navbar-nav navbar-right">
+						<li><a href="/">О нас</a></li>
+						<li><a href="/services">Услуги</a></li>
+						<li><a href="#">Контакты</a></li>
+					  </ul>
+					</div><!-- /.navbar-collapse -->
+				</nav>
+			</div>
+		</div>
+	</header>
+
+    <main>
+        @yield('content')
+    </main>
+
+    <footer data-type="background" data-speed="0" class="pages">
+        <hr class="angle">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5">
+                    <div class="col-xs-4">
+                        <img src="/images/ico/build-1.png" alt="building">
+                    </div>
+                    <div class="txt-block col-xs-8">
+                        <p>
+                            United States<br>
+                            1305 SE Fort Lauderdale,<br>
+                            FL 33301 USA<br>
+                            info@happer.ru<br>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </header>
-
-        <main>
-            @yield('content')
-        </main>
-    </div>
-    <footer>
-		<div class="container">
-			<div class="still">
-				{{--<div class="col-xs-12 col-sm-2">--}}
-                    {{--<img src="/images/logo.png" alt="logo" class="hidden-xs">--}}
-				{{--</div>--}}
-				<div class="col-xs-12 col-sm-4">
-                    <img src="/images/ico/building1.png" alt="building" class="hidden-xs">
-                    <p>
-                        United States<br>
-                        1305 SE Fort Lauderdale,<br>
-                        FL 33301 USA<br>
-                        info@happer.ru<br>
-                    </p>
-				</div>
-                <div class="col-xs-12 col-sm-4">
-                    <img src="/images/ico/building2.png" alt="building" class="hidden-xs">
-                    <p>
-                        Санкт-Петербург, Мойки 7<br>
-                        info@happer.ru<br>
-                        +7(812)649-17-43
-                    </p>
-				</div>
-                <div class="col-xs-12 col-sm-4 text-right">
-                     <p class="social">
+                <div class="col-xs-12 col-sm-2 social-block">
+                    <p class="social">
                         <i class="ico-social vk"></i>
                         <i class="ico-social fb"></i>
                         <i class="ico-social tw"></i>
-                     </p>
-				</div>
-			</div>
-		</div>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-5">
+                    <div class="txt-block col-xs-8">
+                        <p class="text-right">
+                            Санкт-Петербург, Мойки 7<br>
+                            info@happer.ru<br>
+                            +7(812)649-17-43
+                        </p>
+                    </div>
+                    <div class="col-xs-4">
+                        <img src="/images/ico/build-2.png" alt="building">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <hr class="angle gray">
+        <div class="footer-bottom paper">
+            <div class="text-center">
+                <img src="/images/logo-text.png" alt="happer media">
+            </div>
+        </div>
+
     </footer>
 
 
-{{ HTML::script('/js/lib/jquery-1.11.3.min.js') }}
-{{ HTML::script('/js/lib/bootstrap.min.js') }}
+    {{ HTML::script('/js/lib/jquery-1.11.3.min.js') }}
+    {{ HTML::script('/js/lib/bootstrap.min.js') }}
 
-{{ HTML::script('/js/main.min.js') }}
-@yield('scripts')
+    {{ HTML::script('/js/main.min.js') }}
+    @yield('scripts')
 
 </body>
 

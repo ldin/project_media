@@ -1,3 +1,10 @@
+@white: #ffffff;
+@black: #000000;
+@brown: #664433;
+@dark: #32435d;
+@bg-gray: #f1f2f4;
+
+
 //Разметка шрифтов
 @font-face {
   font-family: 'Lato';
@@ -36,6 +43,7 @@
 body {
   font-family: 'Lato', sans-serif;
   .set-font(@line* 0.8);
+  color: @brown;
 }
 
 h1 {
@@ -48,10 +56,11 @@ h2 {
   .set-font(@line * 2.8, @line * 3);
   .set-margin(@line * 2, @line * 2);
   text-align: center;
+  color: @dark;
 }
 
 h3 {
-  .set-font(@line * 2, @line * 2);
+  .set-font(@line * 1.5, @line * 2);
   .set-margin();
 }
 
@@ -67,11 +76,6 @@ li{
 }
 
 //Базовая разметка
-@white: #ffffff;
-@black: #000000;
-@brown: #664433;
-@dark: #32435d;
-@bg-gray: #f1f2f4;
 
 html, body, main, #mainpage{width: 100%; position: relative}
 
@@ -81,6 +85,8 @@ html, body, main, #mainpage{width: 100%; position: relative}
  img{max-width: 100%;}
 
 .pad-50{padding: 50px 0;}
+.pad-b50{padding-bottom: 50px;}
+.pad-b100{padding-bottom: 50px;}
 
 .social i{
   width: 26px;
@@ -125,6 +131,69 @@ hr{
   background-size:cover;
 }
 
+.list-empty{
+  margin: 0; padding: 0; list-style: none;
+}
+
+.complex-tabs{
+  .nav-tabs {
+    border-bottom: none;
+  }
+  .nav-tabs>li {
+    float: none;
+    display: block;
+    padding: 10px;
+    &>a{
+      color: @dark;
+      background: transparent;
+      display: inline;
+      padding: 0;
+      border: none;
+      border-bottom: 1px dashed;
+      .set-font(@line * 1.4, @line * 1.4);
+      &:hover, &:focus{
+        border: none;
+        background: transparent;
+      }
+    }
+    &.active{
+      background: @bg-gray;;
+    }
+  }
+  .tab-content{
+    color: @brown;
+    background: @bg-gray;
+    padding: 20px;
+  }
+  .block-left{padding-right: 0;}
+  .block-right{padding-left: 0;}
+  i.complex{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("/images/ico/complex.png") no-repeat;
+    &.communications{background-position: 0 0}
+    &.society{background-position: 0 0}
+    &.internal{background-position: -30px 0}
+    &.media{background-position: -60px 0}
+    &.online{background-position: -90px 0}
+    &.revenue{background-position: -120px 0}
+    &.start{background-position: -150px 0}
+    &.event{background-position: -180px 0}
+  }
+}
+
+i.complex-only{
+  width: 230px;
+  height: 55px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("/images/ico/complex-only.png") no-repeat;
+  &.x-complex{background-position: 0 0}
+  &.x-only{background-position: 0 -55px}
+}
+
 //Страничная разметка
 header{
   //height: 20px;
@@ -167,52 +236,9 @@ header{
   h2{color: @dark;}
 }
 #complex{
-  .nav-tabs {
-    border-bottom: none;
-  }
-  .nav-tabs>li {
-    float: none;
-    display: block;
-    padding: 10px;
-    &>a{
-      color: @dark;
-      background: transparent;
-      display: inline;
-      padding: 0;
-      border: none;
-      border-bottom: 1px dashed;
-      .set-font(@line * 1.4, @line * 1.4);
-      &:hover{
-        border: none;
-      }
-    }
-    &.active{
-      background: @bg-gray;;
-    }
-  }
-  .tab-content{
-    color: @brown;
-    background: @bg-gray;
-    padding: 20px;
-  }
-  .block-left{padding-right: 0;}
-  .block-right{padding-left: 0;}
-  i.complex{
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    vertical-align: middle;
-    background: url("/images/ico/complex.png") no-repeat;
-    &.communications{background-position: 0 0}
-    &.society{background-position: 0 0}
-    &.internal{background-position: -30px 0}
-    &.media{background-position: -60px 0}
-    &.online{background-position: -90px 0}
-    &.revenue{background-position: -120px 0}
-    &.start{background-position: -150px 0}
-    &.event{background-position: -180px 0}
-  }
+
 }
+
 
 #services{
   &.triangle{z-index: -1}
@@ -259,3 +285,24 @@ footer{
   }
   footer .social {padding: 30px 0 0 0;}
 }
+
+#services-page{
+  #slider {
+    background-image: url("/images/bg/happer_06_4.jpg");
+    min-height: 100px;
+    .container{margin: 100px auto 50px;}
+  }
+}
+
+#complex-trigger{
+  p {
+    .set-font(@line * 1.5, @line * 2);
+    a{
+      color: #ccc;
+      text-decoration: underline;
+      &.dark{color: @dark}
+    }
+
+  }
+}
+

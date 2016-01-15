@@ -44,6 +44,7 @@ class AdminController extends BaseController {
 
         $templates = array(
                 'services'=>'Сервисы',
+                'uslugi'=>'Услуги',
                 'page'=>'Текст',
                 'news'=>'Новости',
                 'portfolio'=>'Портфолио',

@@ -1,6 +1,12 @@
  
 $( document ).ready(function() {
 
+    //tabs
+    $('#complex-services a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
     //soft scrolling
     $('a[href^="#"]').click(function () {
         var el = $(this).attr('href');
@@ -10,7 +16,6 @@ $( document ).ready(function() {
     });
 
     //Parallax Scrolling animation
-
     $('[data-type="background"]').each(function(){
         var $bgobj = $(this);
         $(window).scroll(function() {
