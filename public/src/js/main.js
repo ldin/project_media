@@ -8,7 +8,7 @@ $( document ).ready(function() {
     })
 
     //soft scrolling
-    $('a[href^="#"]').click(function () {
+    $('a.soft[href^="#"]').click(function () {
         var el = $(this).attr('href');
         $('body').animate({
             scrollTop: $(el).offset().top}, 2000);
