@@ -31,7 +31,7 @@
                         <p>
                             <a href="/services"  class="dark">Комплексные услуги</a>
                             <i class="complex-only x-complex"></i>
-                            <a href="/services/separate">Отдельные услуги</a>
+                            <a href="/Individual">Отдельные услуги</a>
                         </p>
                     </div>
                     <div>
@@ -46,10 +46,12 @@
                         </div>
                         <div class="col-xs-12 col-sm-6">
                             <ul class="text-left list-empty">
-                                <li>Kоммуникации</li>
-                                <li>Комплексные</li>
-                                <li>Работа</li>
-                                <li>Бизнесс</li>
+                                <?php //var_dump($posts); ?>
+                                @if(!empty($posts['individual']))
+                                    @foreach($posts['individual'] as $post)
+                                            <li>{{$post->name}}</li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </div>
                     </div>

@@ -77,7 +77,7 @@ class HomeController extends BaseController {
             //var_dump($post->galleries);
         }
 
-         else if($type_post->template=='uslugi'){
+         else if($type_post->template=='individual' || $type_post->template=='services'){
              if($slug!=''){
                 $row = Post::where('slug',$slug)->first();
                 if($row->parent!=0){
@@ -88,17 +88,15 @@ class HomeController extends BaseController {
                 $posts_child = Post::where('type_id',$type_post->id)->where('status',1)->where('parent', '=', $row->id)->orderBy('created_at', 'desc')->get();
              }
              else{
-                 $posts = Post::where('type_id',$type_post->id)->where('status',1)->where('parent',0)->orderBy('order', 'asc')->get();
+                 $id['individual'] = Type::where('type', 'individual')->first()->id;
+                 $id['services'] = Type::where('type', 'services')->first()->id;
+                 $posts['individual'] = Post::where('type_id',$id['individual'])->where('status',1)->where('parent',0)->orderBy('order', 'asc')->get();
+                 $posts['services'] = Post::where('type_id',$id['services'])->where('status',1)->where('parent',0)->orderBy('order', 'asc')->get();
 //                 var_dump($posts); die();
              }
 
          }
 
-         else if($type_post->template=='services'){
-             if($slug =='separate'){
-                 $type_post->template = 'services-separate';
-             }
-         }
 
         else{
             

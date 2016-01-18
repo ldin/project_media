@@ -34,104 +34,50 @@
                             <a href="/services/separate" class="dark">Отдельные услуги</a>
                         </p>
                     </div>
+                    <div>
+                        <div class="col-xs-12 col-sm-6">
+                            <ul class="text-right list-empty">
+                                <li>Внешние коммуникации компании</li>
+                                <li>Комплексные решения</li>
+                                <li>Бизнесс Онлайн</li>
+                                <li>Работа со СМИ</li>
+
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <ul class="text-left list-empty active">
+                                <?php //var_dump($posts); ?>
+                                @if(!empty($posts['individual']))
+                                    @foreach($posts['individual'] as $post)
+                                        <li>{{ HTML::link('#'.$post->slug, $post->name, array('class'=>'soft')) }}</li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </article>
 
-            <article id="" class="paper pad-b100">
-                <hr class="angle" >
-                <div class="container">
-                    <h2>Бизнесс Онлайн</h2>
+            @if(!empty($posts['individual']))
 
-                    <p></p>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4">
-                            <h3>Задачи в рамках раздела</h3>
-                            <ul>
-                                <li>Описываем нишу</li>
-                                <li>тенденции в нише</li>
-                                <li>Анализируем подобные продукты на рынке</li>
-                                <li>Подбираем локацию</li>
-                                <li>Актуальные проблемы в нише, потребности и ожидания</li>
-                                <li>предложения по корректировке продукта</li>
-                                <li>Мы продумываем для компании как преподнести «продукт» потребителю чтобы он его купил.</li>
-                                <li>Ожидания и предпочтения целевых групп</li>
-                                <li>определение основ лояльности к вашей компании</li>
-                                <li>опрос существующих клиентов</li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-4">
-                            <h3>Результат</h3>
-                            <p>отчет с заключениями, предложения по стратегии коммуникации</p>
-                            <h3>Методы</h3>
-                            <div class="col-xs12">
-                                <ul>
-                                    <div class="col-xs-6">
-                                        <li><i class="complex society"></i>Мониторинг рынка</li>
-                                        <li><i class="complex internal"></i>Опрос потенциальных клиентов</li>
-                                        <li><i class="complex media"></i>Экспертные заключения</li>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <li><i class="complex online"></i>Опрос конкурентов</li>
-                                        <li><i class="complex revenue"></i>Анализ открытых данных</li>
-                                    </div>
-                                </ul>
+                 @foreach($posts['individual'] as $key=>$post)
+
+                    <article id="{{ $post->slug }}" class="{{$key%2==0?'paper':''}}" pad-b100">
+                        <hr class="angle {{$key%2==0?'':'gray'}}" >
+                        <div class="container">
+                            <h2>{{  $post->name }}</h2>
+
+
+                            <div class="row text-center">
+                                <p>{{  $post->text }}</p>
+
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-4">
-                            <h3>Вы получите</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </article>
+                    </article>
 
-        <article id="" class="pad-b100">
-            <hr class="angle gray" >
-            <div class="container">
-                <h2>Бизнесс Онлайн</h2>
+                @endforeach
+            @endif
 
-                <p></p>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                        <h3>Задачи в рамках раздела</h3>
-                        <ul>
-                            <li>Описываем нишу</li>
-                            <li>тенденции в нише</li>
-                            <li>Анализируем подобные продукты на рынке</li>
-                            <li>Подбираем локацию</li>
-                            <li>Актуальные проблемы в нише, потребности и ожидания</li>
-                            <li>предложения по корректировке продукта</li>
-                            <li>Мы продумываем для компании как преподнести «продукт» потребителю чтобы он его купил.</li>
-                            <li>Ожидания и предпочтения целевых групп</li>
-                            <li>определение основ лояльности к вашей компании</li>
-                            <li>опрос существующих клиентов</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <h3>Результат</h3>
-                        <p>отчет с заключениями, предложения по стратегии коммуникации</p>
-                        <h3>Методы</h3>
-                        <div class="col-xs12">
-                            <ul>
-                                <div class="col-xs-6">
-                                    <li><i class="complex society"></i>Мониторинг рынка</li>
-                                    <li><i class="complex internal"></i>Опрос потенциальных клиентов</li>
-                                    <li><i class="complex media"></i>Экспертные заключения</li>
-                                </div>
-                                <div class="col-xs-6">
-                                    <li><i class="complex online"></i>Опрос конкурентов</li>
-                                    <li><i class="complex revenue"></i>Анализ открытых данных</li>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <h3>Вы получите</h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </article>
     </section>
 
 @stop
