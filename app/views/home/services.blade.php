@@ -34,9 +34,28 @@
                             <a href="/services/separate">Отдельные услуги</a>
                         </p>
                     </div>
+                    <div>
+                        <div class="col-xs-12 col-sm-4">
+                            <ul class="text-right list-empty">
+                                <li><a href="#block-communications" class="soft">Внешние коммуникации компании</a></li>
+                                <li><a href="#block-complex" class="soft">Комплексные решения</a></li>
+                                <li><a href="#block-online" class="soft">Бизнесс Онлайн</a></li>
+                                <li><a href="#block-media" class="soft">Работа со СМИ</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <ul class="list-empty">
+                                <li>Kоммуникации</li>
+                                <li>Комплексные</li>
+                                <li>Работа</li>
+                                <li>Бизнесс</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </article>
-            <article id="" class="paper pad-b100">
+            <article id="block-communications" class="paper pad-b100">
                 <hr class="angle" >
                 <div class="container pad-b100">
 					<h2>Внешние коммуникации компании</h2>
@@ -151,7 +170,7 @@
 				</div>
             </article>
             <hr class="angle-invert" >
-            <article>
+            <article id="block-complex">
                     <div class="container pad-b100">
                         <h2>Комплексные решения</h2>
                         <div id="complex-services" class="row complex-tabs">
@@ -223,7 +242,7 @@
                         </div>
                     </div>
             </article>
-            <article id="" class="paper pad-b100">
+            <article id="block-online" class="paper pad-b100">
                 <hr class="angle" >
                 <div class="container">
                     <h2>Бизнесс Онлайн</h2>
@@ -273,7 +292,7 @@
                     </div>
                 </div>
             </article>
-            <article id="" class="pad-b100">
+            <article id="block-media" class="pad-b100">
                 <hr class="angle gray" >
                 <div class="container">
                     <h2>Работа со СМИ</h2>

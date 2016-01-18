@@ -30,6 +30,7 @@
 
 @line: 16px;
 
+
 .set-font(@font-size, @line-height: @line) {
   font-size: @font-size;
   line-height: @line-height;
@@ -279,6 +280,14 @@ footer{
 }
 
 @media(max-width: 768px){
+  h1 {
+    .set-font(@line * 3, @line * 3);
+  }
+
+  h2 {
+    .set-font(@line * 2.5, @line * 2.5);
+  }
+
   header .nav>li>a {text-align: center;}
   #slider{text-align: center}
   #complex{
