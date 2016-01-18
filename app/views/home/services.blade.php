@@ -56,6 +56,7 @@
 							<div class="tab-content">
 								<div role="tabpanel" class="tab-pane fade in active" id="сommunication-with-customers">
                                     <div class="row">
+                                        <p class="h2 text-center"><i class="complex communications"></i>Внешние коммуникации с потребителями</p>
                                         <div class="col-xs-12 col-md-6">
                                             <h3>Задачи в рамках раздела:</h3>
                                             <ul>
@@ -96,6 +97,7 @@
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="communication-with-public">
                                     <div class="row">
+                                        <p class="h2 text-center"><i class="complex internal"></i>Коммуникации с общественностью</p>
                                         <div class="col-xs-12 col-md-6">
                                             <h3>Задачи в рамках раздела:</h3>
                                             <ul>
@@ -136,7 +138,11 @@
                                         </div>
                                     </div>
                                 </div>
-								<div role="tabpanel" class="tab-pane fade" id="communication-with-partner">..Messages.</div>
+								<div role="tabpanel" class="tab-pane fade" id="communication-with-partner">
+                                    <div class="row">
+                                        <p class="h2 text-center"><i class="complex media"></i>Коммуникации с партнерами</p>
+                                    </div>
+                                </div>
 
 							</div>
 						</div>
