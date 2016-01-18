@@ -35,8 +35,8 @@
                         </p>
                     </div>
                     <div>
-                        <div class="col-xs-12 col-sm-4">
-                            <ul class="text-right list-empty">
+                        <div class="col-xs-12 col-sm-6">
+                            <ul class="text-right list-empty active">
                                 <li><a href="#block-communications" class="soft">Внешние коммуникации компании</a></li>
                                 <li><a href="#block-complex" class="soft">Комплексные решения</a></li>
                                 <li><a href="#block-online" class="soft">Бизнесс Онлайн</a></li>
@@ -44,8 +44,8 @@
 
                             </ul>
                         </div>
-                        <div class="col-xs-12 col-sm-4">
-                            <ul class="list-empty">
+                        <div class="col-xs-12 col-sm-6">
+                            <ul class="text-left list-empty">
                                 <li>Kоммуникации</li>
                                 <li>Комплексные</li>
                                 <li>Работа</li>

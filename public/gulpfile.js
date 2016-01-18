@@ -69,3 +69,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default',['css', /*'image',*/'script', 'watch']);
+
+//npm i --save-dev gulp //подгрузить пакеты
