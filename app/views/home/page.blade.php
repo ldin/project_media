@@ -8,6 +8,8 @@
 
     <section id="pages">
 
+    <!--
+
     <article id="slider" data-type="background" data-speed="10" class="pages">
         <hr class="angle">
         <div class="container">
@@ -27,6 +29,10 @@
     </article>
 
     <hr class="angle-invert" >
+
+    -->
+
+
 
     <div id="content" class="container pad-50">
 

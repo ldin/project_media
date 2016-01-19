@@ -20,9 +20,6 @@
                 <div class="col-xs-12 col-sm-9 text-center">
                     @if(!empty($row))
                         <p class="h1">{{$row->name}}</p>
-                        @if(isset($posts_child)&&count($posts_child)>0&&!empty($row->text))
-                            <div class="text-left">{{ $row->text }}</div>
-                        @endif
                     @else
                         <p class="h1">{{ $type->name }}</p>
                         <p class="h3">happer media</p>
@@ -49,9 +46,7 @@
                                 @if(!empty($post->image))
                                     {{ HTML::image('/upload/image/'.$post->image, $post->slug)  }}
                                 @endif
-                                <!--
-                                {{ HTML::image('/upload/image/'.$post->image, $post->slug, array('class'=>$key%2==0?'left':'right'))  }}
-                                -->
+
                                 <p>{{  $post->text }} </p>
                                 <div class="text-center">
                                     {{ HTML::link('/'.$type->type.'/'.$post->slug, 'подробнее', array('class'=>'btn btn-main')) }}
