@@ -37,9 +37,9 @@
 
             @include('home.trigger-menu')
 
-            @if(!empty($posts['individual']))
+            @if(!empty($posts[$type->type]))
 
-                 @foreach($posts['individual'] as $key=>$post)
+                 @foreach($posts[$type->type] as $key=>$post)
 
                     <article id="{{ $post->slug }}" class="{{$key%2==0?'paper':''}}" pad-b100">
                         <hr class="angle {{$key%2==0?'':'gray'}}" >
@@ -48,13 +48,15 @@
 
 
                             <div class="row text-center">
-                                {{ HTML::image('/upload/image/'.$post->image, $post->slug)  }}
+                                @if(!empty($post->image))
+                                    {{ HTML::image('/upload/image/'.$post->image, $post->slug)  }}
+                                @endif
                                 <!--
                                 {{ HTML::image('/upload/image/'.$post->image, $post->slug, array('class'=>$key%2==0?'left':'right'))  }}
                                 -->
                                 <p>{{  $post->text }} </p>
                                 <div class="text-center">
-                                    {{ HTML::link('/individual/'.$post->slug, 'подробнее', array('class'=>'btn btn-main')) }}
+                                    {{ HTML::link('/'.$type->type.'/'.$post->slug, 'подробнее', array('class'=>'btn btn-main')) }}
                                 </div>
 
                             </div>
@@ -67,7 +69,7 @@
         @else
 
 
-            @if(isset($posts_child)&&count($posts_child)>0)
+            @if(isset($posts_child)&&count($posts_child)>1)
 
                 <article id="block-communications" class="pad-b100">
                     <hr class="angle" >
@@ -108,15 +110,25 @@
                     </div>
                 </article>
 
-            @else
+            @elseif(isset($posts_child)&&count($posts_child)==1)
+
+                <?php $row = $posts_child[0] ?>
 
                 @if(!empty($row->text))
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="text-center">{{ $row->text }}</div>
+                    <div class="container pad-b100">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div>{{ $row->text }}</div>
+                            </div>
                         </div>
                     </div>
                 @endif
+
+            @else
+
+                <div class="container pad-50">
+                    <p>Извините, данная страница сейчас в разработке.</p>
+                </div>
 
             @endif
 
