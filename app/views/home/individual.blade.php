@@ -62,6 +62,11 @@
                     </article>
 
                 @endforeach
+
+                @if(count($posts[$type->type])%2==0)
+                    <hr class="angle gray" >
+                @endif
+
             @endif
 
         @else
