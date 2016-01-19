@@ -97,10 +97,9 @@
                 </div>
             </div>
         </div>
-        </div>
-        </div>
-        <hr class="angle gray">
-        <div class="footer-bottom paper">
+
+        <hr class="angle transform">
+        <div class="footer-bottom">
             <div class="text-center">
                 <img src="/images/logo-text.png" alt="happer media">
             </div>
