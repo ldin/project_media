@@ -24,7 +24,7 @@
                             <div class="text-left">{{ $row->text }}</div>
                         @endif
                     @else
-                        <p class="h1">Услуги</p>
+                        <p class="h1">{{ $type->name }}</p>
                         <p class="h3">happer media</p>
                     @endif
                 </div>
@@ -35,14 +35,12 @@
 
         @if(empty($row))
 
-            @include('home.trigger-menu')
-
             @if(!empty($posts[$type->type]))
 
                  @foreach($posts[$type->type] as $key=>$post)
 
-                    <article id="{{ $post->slug }}" class="{{$key%2==0?'paper':''}}" pad-b100">
-                        <hr class="angle {{$key%2==0?'':'gray'}}" >
+                    <article id="{{ $post->slug }}" class="{{$key%2==0?'':'paper'}} pad-b100">
+                        <hr class="angle {{($key%2==0)&&($key!=0)?'gray':''}}" >
                         <div class="container">
                             <h2>{{  $post->name }}</h2>
 
