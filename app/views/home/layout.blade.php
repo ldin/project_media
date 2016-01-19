@@ -33,7 +33,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						  </button>
-						<img src="/images/logo-text.png" class="logo">
+						  <a href="/"><img src="/images/logo-text.png" class="logo"></a>
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,7 +47,7 @@
                                   <li><a href="/individual">Отдельные услуги</a></li>
                               </ul>
                         </li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="/contacts">Контакты</a></li>
 					  </ul>
 					</div><!-- /.navbar-collapse -->
 				</nav>

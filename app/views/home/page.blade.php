@@ -6,9 +6,29 @@
 
 @section('content')
 
-    <section id="mainpage" data-type="background" data-speed="5" class="block-slide pages">
+    <section id="pages">
 
-    <div id="content" class="container">
+    <article id="slider" data-type="background" data-speed="10" class="pages">
+        <hr class="angle">
+        <div class="container">
+            <div class="col-xs-12 col-sm-3">
+                <img src="/images/logo-200x170.png" alt="logo happer" class="logo">
+
+            </div>
+            <div class="col-xs-12 col-sm-9 text-center">
+                @if(!empty($row))
+                    <p class="h1">{{$row->name}}</p>
+                @else
+                    <p class="h1">happer media</p>
+                @endif
+            </div>
+        </div>
+
+    </article>
+
+    <hr class="angle-invert" >
+
+    <div id="content" class="container pad-50">
 
     <div class="row">
 
@@ -93,6 +113,7 @@
     </div>
 
     </div>
+
     </section>
 @stop
 

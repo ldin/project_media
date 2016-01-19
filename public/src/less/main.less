@@ -78,7 +78,7 @@ li{
 
 //Базовая разметка
 
-html, body, main, #mainpage{width: 100%; position: relative}
+html, body, main, #main-page{width: 100%; position: relative}
 
 .right{float: right;}
 .left{float: left;}
@@ -221,7 +221,7 @@ header{
 #slider{
   background: #7A5F49  url("/images/bg/happer_06_4.jpg") center 0 no-repeat fixed;
   background-size: cover;
-  min-height: 75vh;
+  min-height: 100px;
   color: @white;
   margin-top: -25px;
   padding-bottom: 74px;
@@ -232,6 +232,13 @@ header{
     .set-font(@line * 3.5, @line * 3);
     .set-margin();
   }
+  .container{margin: 100px auto 50px;}
+}
+#main-page{
+  #slider{
+    min-height: 75vh;
+    .container{margin-top: 15%}
+  }
 }
 #setting-work{
   padding: 20px 0 70px;
@@ -239,10 +246,6 @@ header{
   color: @brown;
   h2{color: @dark;}
 }
-#complex{
-
-}
-
 
 #services{
   &.triangle{z-index: -1}
@@ -301,8 +304,6 @@ footer{
 #services-page{
   #slider {
     background-image: url("/images/bg/happer_06_4.jpg");
-    min-height: 100px;
-    .container{margin: 100px auto 50px;}
   }
 }
 
