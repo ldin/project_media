@@ -33,8 +33,8 @@ class AdminController extends BaseController {
             return View::make('admin.content')->with('posts', $posts);
         }
 
-        $posts = Post::where('type_id', '=', $type_id)->where('parent', '=', '0')->orderBy('created_at', 'desc')->get();
-        $posts_child = Post::where('type_id', '=', $type_id)->where('parent', '!=', '0')->orderBy('created_at', 'desc')->get();
+        $posts = Post::where('type_id', '=', $type_id)->where('parent', '=', '0')->orderBy('order', 'asc')->get();
+        $posts_child = Post::where('type_id', '=', $type_id)->where('parent', '!=', '0')->orderBy('order', 'asc')->get();
 
         $view = array(
             'posts' => $posts,

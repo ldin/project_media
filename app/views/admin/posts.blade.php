@@ -49,7 +49,7 @@
             <div class="form-group form-inline col-sm-6 col-xs-12">
                 {{ Form::text('order', (isset($row->order)?$row->order:''), array('class' => 'form-control order-select', 'id'=>'selectOrder'))}}
                 {{ Form::label('selectOrder', 'Порядок вывода на сайте') }}
-                <small><p class="info-txt">Только для коллекций</p></small>
+                <small><p class="info-txt"></p></small>
 
             </div> 
             <div class="form-group col-sm-6 col-xs-12">

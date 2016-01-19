@@ -85,7 +85,7 @@ class HomeController extends BaseController {
                     $row->parent_title=$parent->name;
                     $row->parent_slug=$parent->slug;
                 }
-                $posts_child = Post::where('type_id',$type_post->id)->where('status',1)->where('parent', '=', $row->id)->orderBy('created_at', 'desc')->get();
+                $posts_child = Post::where('type_id',$type_post->id)->where('status',1)->where('parent', '=', $row->id)->orderBy('order', 'asc')->get();
              }
              else{
                  $id['individual'] = Type::where('type', 'individual')->first()->id;
