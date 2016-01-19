@@ -10,53 +10,32 @@
 @section('content')
 
     <section id="services-page">
-			<article id="slider" data-type="background" data-speed="10" class="pages">
-				<hr class="angle">
-				<div class="container">
-					<div class="col-xs-12 col-sm-3">
-						<img src="/images/logo-200x170.png" alt="logo happer" class="logo">
+        <article id="slider" data-type="background" data-speed="10" class="pages">
+            <hr class="angle">
+            <div class="container">
+                <div class="col-xs-12 col-sm-3">
+                    <img src="/images/logo-200x170.png" alt="logo happer" class="logo">
 
-					</div>
-					<div class="col-xs-12 col-sm-9 text-center">
-						<p class="h1">Услуги</p>
-						<p class="h3">happer media</p>
-					</div>
-				</div>
-
-			</article>
-            <hr class="angle-invert" >
-            <article id="complex-trigger">
-                <div class="container text-center pad-50">
-                    <div>
-                        <p>
-                            <a href="/services" >Комплексные услуги</a>
-                            <i class="complex-only x-only"></i>
-                            <a href="/services/separate" class="dark">Отдельные услуги</a>
-                        </p>
-                    </div>
-                    <div>
-                        <div class="col-xs-12 col-sm-6">
-                            <ul class="text-right list-empty">
-                                <li>Внешние коммуникации компании</li>
-                                <li>Комплексные решения</li>
-                                <li>Бизнесс Онлайн</li>
-                                <li>Работа со СМИ</li>
-
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <ul class="text-left list-empty active">
-                                <?php //var_dump($posts); ?>
-                                @if(!empty($posts['individual']))
-                                    @foreach($posts['individual'] as $post)
-                                        <li>{{ HTML::link('#'.$post->slug, $post->name, array('class'=>'soft')) }}</li>
-                                    @endforeach
-                                @endif
-                            </ul>
-                        </div>
-                    </div>
                 </div>
-            </article>
+                <div class="col-xs-12 col-sm-9 text-center">
+                    @if(!empty($row))
+                        <p class="h1">{{$row->name}}</p>
+                        @if(isset($posts_child)&&count($posts_child)>0&&!empty($row->text))
+                            <div class="text-left">{{ $row->text }}</div>
+                        @endif
+                    @else
+                        <p class="h1">Услуги</p>
+                        <p class="h3">happer media</p>
+                    @endif
+                </div>
+            </div>
+
+        </article>
+        <hr class="angle-invert" >
+
+        @if(empty($row))
+
+            @include('home.trigger-menu')
 
             @if(!empty($posts['individual']))
 
@@ -69,7 +48,14 @@
 
 
                             <div class="row text-center">
-                                <p>{{  $post->text }}</p>
+                                {{ HTML::image('/upload/image/'.$post->image, $post->slug)  }}
+                                <!--
+                                {{ HTML::image('/upload/image/'.$post->image, $post->slug, array('class'=>$key%2==0?'left':'right'))  }}
+                                -->
+                                <p>{{  $post->text }} </p>
+                                <div class="text-center">
+                                    {{ HTML::link('/individual/'.$post->slug, 'подробнее', array('class'=>'btn btn-main')) }}
+                                </div>
 
                             </div>
                         </div>
@@ -77,6 +63,65 @@
 
                 @endforeach
             @endif
+
+        @else
+
+
+            @if(isset($posts_child)&&count($posts_child)>0)
+
+                <article id="block-communications" class="pad-b100">
+                    <hr class="angle" >
+                    <div class="container pad-b100">
+
+                        <div id="complex-services" class="row complex-tabs" >
+                            <div class="col-xs-12 col-sm-5 col-md-3 block-left">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+
+                                    @foreach($posts_child as $k=>$post_ch)
+                                        <li role="presentation" class="{{$k==0?'active':''}}">
+                                            {{ HTML::link('#'.$post_ch->slug, $post_ch->name, array('aria-controls'=>$post_ch->slug, 'role'=>'tab', 'data-toggle'=>'tab')) }}
+                                            <i class="glyphicon glyphicon-menu-right"></i>
+                                        </li>
+                                    @endforeach
+
+                                </ul>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-7 col-md-9 block-right">
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+
+                                    @foreach($posts_child as $k=>$post_ch)
+                                        <div role="tabpanel" class="tab-pane fade {{$k==0?'in active':''}} " id="{{  $post_ch->slug }}">
+                                            <div class="row">
+                                                <p class="h2 text-center">{{ $post_ch->name }}</p>
+                                                {{ $post_ch->text }}
+                                            </div>
+                                        </div>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+
+            @else
+
+                @if(!empty($row->text))
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="text-center">{{ $row->text }}</div>
+                        </div>
+                    </div>
+                @endif
+
+            @endif
+
+
+        @endif
 
     </section>
 

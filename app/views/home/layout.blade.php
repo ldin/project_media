@@ -40,7 +40,13 @@
 					<div class="collapse navbar-collapse" id="navbar-main-menu">
 					  <ul class="nav navbar-nav navbar-right">
 						<li><a href="/">О нас</a></li>
-						<li><a href="/services">Услуги</a></li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Услуги <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="/services">Комплексные услуги</a></li>
+                                  <li><a href="/individual">Отдельные услуги</a></li>
+                              </ul>
+                        </li>
 						<li><a href="#">Контакты</a></li>
 					  </ul>
 					</div><!-- /.navbar-collapse -->

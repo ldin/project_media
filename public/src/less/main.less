@@ -186,15 +186,17 @@ hr{
   .h2 i.complex{margin-right: 15px;}
 }
 
-i.complex-only{
-  width: 230px;
-  height: 55px;
-  display: inline-block;
-  vertical-align: middle;
-  background: url("/images/ico/complex-only.png") no-repeat;
-  &.x-complex{background-position: 0 0}
-  &.x-only{background-position: 0 -55px}
+.btn-main{
+  color: @dark;
+  border: 1px solid;
+  border-radius: 0;
+  padding: 10px 30px;
+  &:hover{
+    background: @dark;
+    color: @white;
+  }
 }
+
 
 //Страничная разметка
 header{
@@ -310,15 +312,24 @@ footer{
     a{
       color: #ccc;
       text-decoration: underline;
-      &.dark{color: @dark}
+      &.active{color: @dark}
     }
 
   }
   ul{
-    li{color:#ccc; }
+    li a{color:#ccc; }
     &.active li a{
       color: @dark;
     }
+  }
+  i.complex-only{
+    width: 230px;
+    height: 55px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("/images/ico/complex-only.png") no-repeat;
+    &.x-complex{background-position: 0 0}
+    &.x-only{background-position: 0 -55px}
   }
 }
 

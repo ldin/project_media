@@ -25,38 +25,9 @@
 
 			</article>
             <hr class="angle-invert" >
-            <article id="complex-trigger">
-                <div class="container text-center pad-50">
-                    <div>
-                        <p>
-                            <a href="/services"  class="dark">Комплексные услуги</a>
-                            <i class="complex-only x-complex"></i>
-                            <a href="/Individual">Отдельные услуги</a>
-                        </p>
-                    </div>
-                    <div>
-                        <div class="col-xs-12 col-sm-6">
-                            <ul class="text-right list-empty active">
-                                <li><a href="#block-communications" class="soft">Внешние коммуникации компании</a></li>
-                                <li><a href="#block-complex" class="soft">Комплексные решения</a></li>
-                                <li><a href="#block-online" class="soft">Бизнесс Онлайн</a></li>
-                                <li><a href="#block-media" class="soft">Работа со СМИ</a></li>
 
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <ul class="text-left list-empty">
-                                <?php //var_dump($posts); ?>
-                                @if(!empty($posts['individual']))
-                                    @foreach($posts['individual'] as $post)
-                                            <li>{{$post->name}}</li>
-                                    @endforeach
-                                @endif
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </article>
+            @include('home.trigger-menu')
+
             <article id="block-communications" class="paper pad-b100">
                 <hr class="angle" >
                 <div class="container pad-b100">
