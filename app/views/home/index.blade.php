@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-9">
                     <p class="h1">Делаем бизнес лучше</p>
-                    <p class="h3">Мы добьемся максимального результата для вашего бинеса</p>
+                    <p class="h3">Мы добьемся максимального результата для Вашего бизнеса</p>
                 </div>
             </div>
 
@@ -28,12 +28,12 @@
         <hr class="angle-invert gray" >
         <article id="setting-work" class="triangle paper">
             <div class="container">
-                <h2>Настроем работу бизнеса для воплощения ваших целей.</h2>
+                <h2>Настроим работу бизнеса для воплощения Ваших целей.</h2>
                 <p class="text-center">
-                    Мы предлагаем комплексный подход используя маркетинговые решения для эффективной работы бизнеса на вас.<br>
-                    Мы оцениваем ситуацию исходя из Ваших желаний и дальнейших жизненных целей.<br>
-                    Мы меняем бизнес для вас, для скорейшего достижения ваших истинных целей. <br>
-                    Наша задача избавить вас от лишних забот и вплотную приблизить вас  к осуществлению задуманного. <br>
+                    Мы предлагаем комплексный подход, используя маркетинговые решения для эффективной работы бизнеса на Вас.<br>
+                    Мы оцениваем ситуацию исходя из Ваших желаний и учитывая Ваши дальнейшие жизненные цели.<br>
+                    Мы меняем бизнес для Вас. <br>
+                    Наша задача - избавить Вас от лишних забот и вплотную приблизить к осуществлению задуманного.<br> 
                     Один звонок может поменять многое.<br>
                 </p>
             </div>
@@ -48,11 +48,11 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active"><i class="complex communications"></i><a href="#complex-communications" aria-controls="complex-communications" role="tab" data-toggle="tab">Коммуникации с потребителями</a> <i class="glyphicon glyphicon-menu-right"></i></li>
-                            <li role="presentation"><i class="complex society"></i><a href="#complex-society" aria-controls="complex-society" role="tab" data-toggle="tab">Коммуникации с общественностью</a> <i class="glyphicon glyphicon-menu-right"></i></li>
+                            <li role="presentation"><i class="complex media"></i><a href="#complex-society" aria-controls="complex-society" role="tab" data-toggle="tab">Коммуникации с общественностью</a> <i class="glyphicon glyphicon-menu-right"></i></li>
                             <li role="presentation"><i class="complex internal"></i><a href="#complex-internal" aria-controls="complex-internal" role="tab" data-toggle="tab">Внутренняя среда компании</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
-                            <li role="presentation"><i class="complex media"></i><a href="#complex-media" aria-controls="complex-media" role="tab" data-toggle="tab">Работа со СМИ</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
+                            {{--<li role="presentation"><i class="complex media"></i><a href="#complex-media" aria-controls="complex-media" role="tab" data-toggle="tab">Работа со СМИ</a>  <i class="glyphicon glyphicon-menu-right"></i></li>--}}
                             <li role="presentation"><i class="complex online"></i><a href="#complex-online" aria-controls="complex-online" role="tab" data-toggle="tab">Бизнес Онлайн</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
-                            <li role="presentation"><i class="complex revenue"></i><a href="#complex-revenue" aria-controls="complex-revenue" role="tab" data-toggle="tab">Быстрое поднятие выручки</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
+                            {{--<li role="presentation"><i class="complex revenue"></i><a href="#complex-revenue" aria-controls="complex-revenue" role="tab" data-toggle="tab">Быстрое поднятие выручки</a>  <i class="glyphicon glyphicon-menu-right"></i></li>--}}
                             <li role="presentation"><i class="complex start"></i><a href="#complex-start" aria-controls="complex-start" role="tab" data-toggle="tab">Быстрый старт</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
                             <li role="presentation"><i class="complex event"></i><a href="#complex-event" aria-controls="complex-event" role="tab" data-toggle="tab">Организация мероприятий</a>  <i class="glyphicon glyphicon-menu-right"></i></li>
                         </ul>
@@ -176,10 +176,9 @@
                         <img src="/images/logo-text-white.png" alt="happer medie">
                     </div>
                     <div class="col-xs-12 col-sm-6">
-                        <p>Happer Media федеральная маркетинговая компания основанная в 2004 году двумя маркетолагами из США работающих в «Goodby, Silverstein and Partners». Учредители 25% США, 75% Россия. Haper Media ведет ряд IT проектов на территории Авствии, Шведции и России.</p>
-                        <p>Основной профиль компании — агенство по маркетингу и коммуникациям.</p>
-                        <p>Мы с огромным удовольствием беремся за стартапы и профессионально сопровождаем уже окрепший бизнес.</p>
-                        <p>Haper Media работает в Северо-Заподном регионе России.</p>
+                        <p>Happer International Media - маркетинговая компания, учрежденная в 2014 году. Имеет представительства в США и России.</p>
+                        <p>Основным направлением работы Happer Media является создание и проведение рекламных кампаний и их аналитика, поддержка и продвижение стартапов, в том числе в сфере IT, создание и продвижение сайтов, а так же Social Media Marketing.</p>
+                        <p>Happer Media ведет ряд IT проектов на территории Соединенных Штатов Америки и Российской Федерации.</p>
                     </div>
                 </div>
             </div>
@@ -189,8 +188,8 @@
             <div class="container pad-50">
                 <h2>Вы платите за цели</h2>
                 <p class="text-center">
-                    Работая по системе тайм материал (по англ) мы имеем прозрачное ценообразование - вы платите только за время работы специалиста над вашим проектом.<br>
-                    Мы бережно относимся к вашим затратам. И после у нас есть ваши клиенты.
+                    Мы работаем по системе Time Material , которая подразумевает прозрачное ценообразование - Вы платите только за время работы специалиста над Вашим проектом.<br>
+                    Мы экономим Ваши деньги, добиваясь максимального результата при минимальных затратах.
                 </p>
             </div>
         </article>
