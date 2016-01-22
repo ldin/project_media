@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-9">
                     <p class="h1">Делаем бизнес лучше</p>
-                    <h1>Коммуникационное агентство happer media</h1>
+                    <h1>Маркетинговое агенство happer media</h1>
                 </div>
             </div>
 
