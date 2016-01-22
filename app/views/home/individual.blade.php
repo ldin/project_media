@@ -13,11 +13,7 @@
         <article id="slider" data-type="background" data-speed="10" class="pages">
             <hr class="angle">
             <div class="container">
-                <div class="col-xs-12 col-sm-3">
-                    <img src="/images/logo-200x170.png" alt="logo happer" class="logo">
-
-                </div>
-                <div class="col-xs-12 col-sm-9 text-center">
+                <div class="col-xs-12 text-center">
                     @if(!empty($row))
                         <p class="h1">{{$row->name}}</p>
                     @else
@@ -37,7 +33,7 @@
                  @foreach($posts[$type->type] as $key=>$post)
 
                     <article id="{{ $post->slug }}" class="{{$key%2==0?'':'paper'}} pad-b100">
-                        <hr class="angle {{($key%2==0)&&($key!=0)?'gray':''}}" >
+                        @if(!empty($key!=0))<hr class="angle {{($key%2==0)?'gray':''}}" >@endif
                         <div class="container">
                             <h2>{{  $post->name }}</h2>
 
