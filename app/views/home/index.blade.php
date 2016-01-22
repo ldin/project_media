@@ -20,7 +20,6 @@
                 </div>
                 <div class="col-xs-12 col-sm-9">
                     <p class="h1">Делаем бизнес лучше</p>
-                    <p class="h3">Мы добьемся максимального результата для Вашего бизнеса</p>
                     <h1>Коммуникационное агентство happer media</h1>
                 </div>
             </div>
@@ -29,11 +28,10 @@
         <hr class="angle-invert gray" >
         <article id="setting-work" class="triangle paper">
             <div class="container">
-                <h2>Настроим работу бизнеса для воплощения Ваших целей.</h2>
+                <h2>Настроим работу бизнеса для воплощения <br> Ваших целей</h2>
                 <p class="text-center">
                     Мы предлагаем комплексный подход, используя маркетинговые решения для эффективной работы бизнеса на Вас.<br>
                     Мы оцениваем ситуацию исходя из Ваших желаний и учитывая Ваши дальнейшие жизненные цели.<br>
-                    Мы меняем бизнес для Вас. <br>
                     Наша задача - избавить Вас от лишних забот и вплотную приблизить к осуществлению задуманного.<br> 
                     Один звонок может поменять многое.<br>
                 </p>
@@ -43,7 +41,7 @@
         <article id="complex" class="complex-tabs">
             <div class="container">
                 <h2>Комплексные решения</h2>
-
+                <p class="text-center">Мы добьемся максимального результата для Вашего бизнеса<br><br></p>
                 <div id="complex-services" class="row">
                     <div class="col-xs-12 col-sm-5 col-md-3 block-left">
                         <!-- Nav tabs -->
@@ -237,51 +235,58 @@
             <hr class="angle">
             <div class="container pad-50">
                 <h2>Отдельные услуги</h2>
+                <p>Мы меняем бизнес для Вас. </p>
                 <div class="text-center pad-20">
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="col-xs-6 col-sm-4 col-md-2 item">
                         <div>
                             <a href="/individual/analysis">
-                                <img src="/images/ico/services/analisis-new.png" alt="analisis">
+                                <div class="images analisis"></div>
+                                {{--<img src="/images/ico/services/analisis-new.png" alt="analisis">--}}
                                 <p>Анализ</p>
                             </a>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="col-xs-6 col-sm-4 col-md-2 item">
                         <div>
                             <a href="/individual/planning">
-                                <img src="/images/ico/services/planning-new.png" alt="planning">
+                                <div class="images planning"></div>
+                                {{--<img src="/images/ico/services/planning-new.png" alt="planning">--}}
                                 <p>Планирование</p>
                             </a>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="col-xs-6 col-sm-4 col-md-2 item">
                         <div>
                             <a href="/individual/design">
-                                <img src="/images/ico/services/design-new.png" alt="design">
+                                <div class="images design"></div>
+                                {{--<img src="/images/ico/services/design-new.png" alt="design">--}}
                                 <p>Дизайн</p>
                             </a>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="col-xs-6 col-sm-4 col-md-2 item">
                         <div>
                             <a href="/individual/development">
-                                <img src="/images/ico/services/projection-new.png" alt="projection">
+                                <div class="images development"></div>
+                                {{--<img src="/images/ico/services/projection-new.png" alt="projection">--}}
                                 <p>Проектирование</p>
                             </a>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="col-xs-6 col-sm-4 col-md-2 item">
                         <div>
                             <a href="/individual/production">
-                                <img src="/images/ico/services/production-new.png" alt="production">
+                                <div class="images production"></div>
+                                {{--<img src="/images/ico/services/production-new.png" alt="production">--}}
                                 <p>Производство</p>
                             </a>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="col-xs-6 col-sm-4 col-md-2 item">
                         <div>
                             <a href="/individual/promotion">
-                                <img src="/images/ico/services/promotion-new.png" alt="promotion">
+                                <div class="images promotion"></div>
+                                {{--<img src="/images/ico/services/promotion-new.png" alt="promotion">--}}
                                 <p>Продвижение</p>
                             </a>
                         </div>

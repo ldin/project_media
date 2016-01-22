@@ -151,6 +151,7 @@ hr{
       padding: 0;
       border: none;
       border-bottom: 1px dashed;
+      margin-left: 10px;
       .set-font(@line * 1.4, @line * 1.4);
       &:hover, &:focus{
         border: none;
@@ -166,7 +167,7 @@ hr{
         height: 20px;
         position: absolute;
         right: 3px;
-        top: 50%;
+        top: 40%;
         bottom: 50%;
         background: url("/images/ico/ico-arr-right.png") no-repeat;
       }
@@ -196,8 +197,12 @@ hr{
   }
   .h2 i.complex{margin-right: 15px;}
   p.price{
-    .set-font(@line * 2, @line * 2);
-    font-weight: 100;
+    .set-font(@line * 1.5, @line * 2);
+    .set-margin();
+    span{
+
+      font-weight: 100;
+    }
   }
   .btn-tabs{
     color: @brown;
@@ -277,8 +282,8 @@ header{
 
       font-weight: 100;
     }
-
   }
+  #complex .container{padding-top: 20px;}
 
 }
 #setting-work{
@@ -297,6 +302,30 @@ header{
     .set-font(@line * 1.1, @line * 2);
   }
   .pad-20{padding: 20px 0;}
+  .item{
+    display: block;
+    .images{
+      width: 115px;
+      height: 120px;
+      background: url("/images/ico/services.png");
+      &.analisis{background-position: 0 0;}
+      &.planning{background-position: -115px 0;}
+      &.design{background-position: -230px 0;}
+      &.development{background-position: -345px 0;}
+      &.production{background-position: -460px 0;}
+      &.promotion{background-position: -575px 0;}
+    }
+    &:hover .images{
+      &.analisis{background-position: 0 -120px;}
+      &.planning{background-position: -115px -120px;}
+      &.design{background-position: -230px -120px;}
+      &.development{background-position: -345px -120px;}
+      &.production{background-position: -460px -120px;}
+      &.promotion{background-position: -575px -120px;}
+    }
+  }
+  //.item:hover .images{background: #000;}
+
 }
 #about{
   background: #42230E url("/images/bg/bg-main-2.jpg") center 0 no-repeat fixed;

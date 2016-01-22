@@ -9,7 +9,7 @@
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/main.css?02" rel="stylesheet">
+    <link href="/css/main.css?03" rel="stylesheet">
 
     <!--[if lt IE 9]>
         <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
