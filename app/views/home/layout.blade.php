@@ -33,7 +33,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						  </button>
-						  <a href="/"><img src="/images/logo-text.png" class="logo"></a>
+						  <a href="/"><img src="/images/logo-text.png" class="logo" alt="happer logo"></a>
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
