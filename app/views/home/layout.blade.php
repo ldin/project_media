@@ -98,8 +98,8 @@
             </div>
         </div>
 
-        <hr class="angle transform">
-        <div class="footer-bottom">
+        <hr class="angle gray transform">
+        <div class="footer-bottom paper">
             <div class="text-center">
                 <img src="/images/logo-text.png" alt="happer media">
             </div>
