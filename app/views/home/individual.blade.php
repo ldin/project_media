@@ -81,7 +81,6 @@
                                     @foreach($posts_child as $k=>$post_ch)
                                         <li role="presentation" class="{{$k==0?'active':''}}">
                                             {{ HTML::link('#'.$post_ch->slug, $post_ch->name, array('aria-controls'=>$post_ch->slug, 'role'=>'tab', 'data-toggle'=>'tab')) }}
-                                            <i class="glyphicon glyphicon-menu-right"></i>
                                         </li>
                                     @endforeach
 
