@@ -87,7 +87,7 @@
                     <div class="txt-block col-xs-8">
                         <p class="text-right">
                             Санкт-Петербург, Мойки 7<br>
-                            info@happer.ru<br>
+                            info@happer.media<br>
                             +7(812)649-04-04
                         </p>
                     </div>
