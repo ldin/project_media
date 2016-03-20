@@ -72,7 +72,7 @@
                             United States<br>
                             1305 SE Fort Lauderdale,<br>
                             FL 33301 USA<br>
-                            info@happer.ru<br>
+                            <a href="mailto:{{ !empty($settings['email_head'])?$settings['email_head']:'' }}">{{ !empty($settings['email_head'])?$settings['email_head']:'' }}</a><br>
                         </p>
                     </div>
                 </div>
@@ -87,8 +87,10 @@
                     <div class="txt-block col-xs-8">
                         <p class="text-right">
                             Санкт-Петербург, Мойки 7<br>
-                            info@happer.media<br>
-                            +7(812)649-04-04
+                            <a href="mailto:{{ !empty($settings['email_head'])?$settings['email_head']:'' }}">{{ !empty($settings['email_head'])?$settings['email_head']:'' }}</a><br>
+                            <a href="tel:{{!empty($settings['phone_head'])?preg_replace('/[^0-9]/', '', $settings['phone_head']):''}}">
+                                {{ !empty($settings['phone_head'])?$settings['phone_head']:'' }}
+                            </a>
                         </p>
                     </div>
                     <div class="col-xs-4">
